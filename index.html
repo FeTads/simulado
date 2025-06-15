@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Online - Técnico Judiciário</title>
+    <!-- Include Tailwind CSS for quick and responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom style for the Inter font */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Soft background color */
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+    <div id="quiz-container" class="bg-white p-8 rounded-lg shadow-xl w-full max-w-2xl">
+        <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Prova Online - Técnico Judiciário</h1>
+
+        <!-- Question Section -->
+        <div id="question-section">
+            <div class="mb-6">
+                <p class="text-lg font-semibold text-gray-700 mb-4">Questão <span id="current-question-number">1</span> de 90</p>
+                <p id="question-text" class="text-xl text-gray-900 mb-6"></p>
+            </div>
+
+            <!-- Answer Options -->
+            <div id="options-container" class="space-y-4">
+                <!-- Options will be inserted here via JavaScript -->
+            </div>
+
+            <!-- Buttons -->
+            <div class="flex justify-center flex-wrap gap-4 mt-8">
+                <button id="next-button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Próxima Questão
+                </button>
+                <button id="skip-button" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Pular Questão
+                </button>
+                <button id="finish-button" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Finalizar Prova
+                </button>
+            </div>
+        </div>
+
+        <!-- Results Section (initialmente oculta) -->
+        <div id="results-section" class="hidden mt-8">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Seu Desempenho</h2>
+            <p id="score-text" class="text-xl text-center text-gray-700 mb-8"></p>
+            <div id="answers-review-container" class="space-y-8">
+                <!-- Detailed answer key will be inserted here via JavaScript -->
+            </div>
+            <div class="flex justify-center mt-8">
+                <button id="restart-button" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105">
+                    Refazer Prova
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timer Section -->
+    <div id="timer-container" class="fixed top-4 right-4 bg-gray-800 text-white p-3 rounded-lg shadow-lg flex items-center space-x-2 z-50">
+        <span id="timer-display" class="text-xl font-mono">00:00:00</span>
+        <button id="timer-start-pause" class="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded-md text-sm">
+            Iniciar
+        </button>
+        <button id="timer-reset" class="bg-gray-500 hover:bg-gray-600 text-white px-3 py-1 rounded-md text-sm">
+            Resetar
+        </button>
+    </div>
+
+    <script>
+        // Array of objects containing the exam questions.
+        // Each object has:
+        // - originalIndex: the original index of the question (for gabarito mapping)
+        // - question: the text of the question
+        // - options: an array with 5 strings for the alternatives
+        // - correctAnswerIndex: the index (0-4) of the correct alternative
+        // - explanation: a string explaining the correct answer
+        const rawQuestions = [
+            // Língua Portuguesa (11 questões)
+            {
+                question: "Qual figura de linguagem consiste na repetição de uma palavra ou expressão no início de versos ou frases sucessivas?",
+                options: ["Metáfora", "Ironia", "Anáfora", "Hipérbole", "Paradoxo"],
+                correctAnswerIndex: 2,
+                explanation: "A anáfora é a repetição intencional de palavras ou frases no início de versos, estrofes ou períodos consecutivos, criando um efeito de ênfase ou ritmo."
+            },
+            {
+                question: "Em qual alternativa o termo em destaque é um advérbio de tempo?",
+                options: ["Ele está 'muito' feliz.", "Saímos 'cedo' para a reunião.", "A casa 'grande' é dele.", "Ela falou 'claramente'.", "Comemos 'bastante'."],
+                correctAnswerIndex: 1,
+                explanation: "'Cedo' indica tempo. Advérbios de tempo expressam a circunstância de tempo em que a ação ocorre."
+            },
+            {
+                question: "Assinale a alternativa em que a concordância verbal está incorreta.",
+                options: ["Havia muitas pessoas na fila.", "Fazem dois anos que não o vejo.", "Devem haver soluções para o problema.", "Trata-se de casos delicados.", "A maioria dos alunos fez a prova."],
+                correctAnswerIndex: 2,
+                explanation: "O verbo 'haver' no sentido de 'existir' ou 'acontecer' é impessoal (não tem sujeito) e deve permanecer no singular. O correto seria 'Deve haver soluções' ou 'Devem existir soluções'."
+            },
+            {
+                question: "Qual o significado da expressão 'ipsis litteris'?",
+                options: ["Ao pé da letra", "Em partes", "De forma rápida", "Em tese", "Com certeza"],
+                correctAnswerIndex: 0,
+                explanation: "'Ipsis litteris' é uma locução latina que significa 'ao pé da letra', 'textualmente', 'palavra por palavra'."
+            },
+            {
+                question: "A frase 'Ele é um anjo!' é um exemplo de qual figura de linguagem?",
+                options: ["Comparação", "Metáfora", "Eufemismo", "Personificação", "Antítese"],
+                correctAnswerIndex: 1,
+                explanation: "A metáfora é uma comparação implícita, sem o uso de conectivos comparativos (como 'como', 'tal qual'). Há uma transferência de significado, atribuindo características de um anjo a 'ele'."
+            },
+            {
+                question: "Identifique a oração subordinada substantiva subjetiva:",
+                options: ["É necessário que todos colaborem.", "Desejo que você vença.", "Sabemos que ele é honesto.", "Parece que vai chover.", "Tenho certeza de que ele virá."],
+                correctAnswerIndex: 0,
+                explanation: "A oração 'que todos colaborem' funciona como sujeito do verbo 'é necessário'. É uma oração subordinada substantiva subjetiva."
+            },
+            {
+                question: "Qual das palavras abaixo NÃO é um substantivo coletivo?",
+                options: ["Cardume", "Alcateia", "Atlas", "Flora", "Réstia"],
+                correctAnswerIndex: 2,
+                explanation: "Cardume (peixes), Alcateia (lobos), Flora (plantas) e Réstia (alho, cebola) são coletivos. Atlas é um livro de mapas, não um coletivo."
+            },
+            {
+                question: "Assinale a alternativa com erro de regência nominal:",
+                options: ["Tenho aversão 'a' doces.", "Estou apto 'para' o trabalho.", "Ele tem capacidade 'de' liderança.", "Minha obediência 'ao' regulamento.", "Ele é acostumado 'com' barulho."],
+                correctAnswerIndex: 4,
+                explanation: "A regência nominal de 'acostumado' pode gerar dúvidas. Embora 'acostumado com' seja comum na linguagem informal para indicar familiaridade, a norma culta, especialmente em concursos, prefere a preposição 'a' quando se refere a um hábito ou costume. Assim, a forma mais adequada seria 'acostumado A barulho'. A alternativa apresentada com 'com' é considerada um desvio da regência padrão em contextos formais."
+            },
+            {
+                question: "Qual o processo de formação de palavras presente em 'planalto'?",
+                options: ["Derivação prefixal", "Derivação sufixal", "Composição por aglutinação", "Composição por justaposição", "Parassíntese"],
+                correctAnswerIndex: 2,
+                explanation: "Planalto é formada pela junção de 'plano' + 'alto'. Houve perda de fonemas ('o' de plano), caracterizando composição por aglutinação."
+            },
+            {
+                question: "A crase está empregada corretamente em qual alternativa?",
+                options: [
+                    "Ele se dirigiu a escola.", // Incorreta
+                    "Ele foi a pé à reunião.", // Incorreta
+                    "Ele assistiu a peça.",     // Incorreta
+                    "Fomos à padaria às dez horas.", // Correta
+                    "Devido à problemas técnicos." // Incorreta
+                ],
+                correctAnswerIndex: 3,
+                explanation: "A alternativa correta é 'Fomos à padaria às dez horas', pois o verbo 'ir' (fomos) rege a preposição 'a', que se une ao artigo 'a' de 'padaria' (à padaria) e ao artigo 'as' de 'dez horas' (às dez horas). Analisando as demais: A) 'Ele se dirigiu a escola' está incorreto; o verbo 'dirigir-se' rege preposição 'a', e 'escola' é feminino, portanto 'à escola'. B) 'Ele foi a pé à reunião' está incorreto; a locução adverbial 'a pé' (com substantivo masculino) não leva crase. C) 'Ele assistiu a peça' está incorreto; o verbo 'assistir' no sentido de 'ver' rege preposição 'a', e 'peça' é feminino, portanto 'à peça'. E) 'Devido à problemas técnicos' está incorreto; a crase não ocorre antes de substantivos masculinos ('problemas')."
+            },
+            { // Added to reach 80 questions
+                question: "Qual dos períodos abaixo apresenta um verbo no modo imperativo?",
+                options: ["Ele estudou muito para a prova.", "Se você vier, avisarei.", "Faça o seu dever agora!", "Eles iriam viajar amanhã.", "Que todos sejam felizes."],
+                correctAnswerIndex: 2,
+                explanation: "'Faça' é uma forma verbal que expressa ordem, pedido ou conselho, característica do modo imperativo."
+            },
+
+            // Matemática/Raciocínio Lógico (11 questões)
+            {
+                question: "Se 'todos os gatos são felinos' e 'alguns felinos são pretos', o que se pode concluir?",
+                options: ["Todos os gatos são pretos.", "Nenhum gato é preto.", "Alguns gatos são pretos.", "Alguns felinos não são gatos.", "Não se pode concluir nada sobre gatos pretos."],
+                correctAnswerIndex: 4,
+                explanation: "A afirmação 'todos os gatos são felinos' não implica que 'todos' os felinos sejam gatos. A segunda afirmação 'alguns felinos são pretos' não especifica se esses felinos são gatos ou não. Portanto, não é possível concluir nada sobre a cor dos gatos com base nas premissas dadas."
+            },
+            {
+                question: "Se 3 torneiras enchem um tanque em 4 horas, quantas horas 6 torneiras idênticas levariam para encher o mesmo tanque?",
+                options: ["1 hora", "2 horas", "3 horas", "4 horas", "6 horas"],
+                correctAnswerIndex: 1,
+                explanation: "É uma relação inversa: mais torneiras significam menos tempo. (3 torneiras * 4 horas) = X torneiras * Y horas. 3 * 4 = 6 * Y => 12 = 6Y => Y = 2 horas."
+            },
+            {
+                question: "Qual o próximo número na sequência: 2, 4, 8, 16, ...?",
+                options: ["20", "24", "30", "32", "36"],
+                correctAnswerIndex: 3,
+                explanation: "A sequência é uma progressão geométrica onde cada termo é o dobro do anterior (2 x 2 = 4, 4 x 2 = 8, 8 x 2 = 16). Então, o próximo é 16 x 2 = 32."
+            },
+            {
+                question: "Se a negação de 'estudei e passei' é 'não estudei ou não passei', qual a negação de 'vou viajar ou vou trabalhar'?",
+                options: ["Não vou viajar ou vou trabalhar.", "Vou viajar e não vou trabalhar.", "Não vou viajar e não vou trabalhar.", "Não vou viajar ou não vou trabalhar.", "Se não vou viajar, então vou trabalhar."],
+                correctAnswerIndex: 2,
+                explanation: "Utiliza-se a Lei de De Morgan: a negação de (P ou Q) é (não P E não Q). Portanto, a negação de 'vou viajar ou vou trabalhar' é 'não vou viajar E não vou trabalhar'."
+            },
+            {
+                question: "Um terreno retangular tem 15m de comprimento e 8m de largura. Qual a sua área?",
+                options: ["23 m²", "46 m²", "60 m²", "100 m²", "120 m²"],
+                correctAnswerIndex: 4,
+                explanation: "A área de um retângulo é calculada multiplicando-se o comprimento pela largura. Área = 15m * 8m = 120 m²."
+            },
+            {
+                question: "Se 'P → Q' é verdadeiro e 'Q' é falso, o que se pode afirmar sobre 'P'?",
+                options: ["P é verdadeiro", "P é falso", "P pode ser verdadeiro ou falso", "Q é verdadeiro", "Não há relação com P"],
+                correctAnswerIndex: 1,
+                explanation: "Na lógica, uma implicação (P → Q) só é falsa se P for verdadeiro e Q for falso. Como a implicação é verdadeira e Q é falso, P obrigatoriamente deve ser falso para a implicação se manter verdadeira."
+            },
+            {
+                question: "Uma prova tem 40 questões. Se um aluno acertou 75% das questões, quantas questões ele errou?",
+                options: ["5", "10", "15", "20", "30"],
+                correctAnswerIndex: 1,
+                explanation: "Se ele acertou 75%, ele errou 100% - 75% = 25% das questões. 25% de 40 questões é (0.25 * 40) = 10 questões."
+            },
+            {
+                question: "Dada a proposição 'Se chove, então faz frio'. Qual das alternativas é equivalente logicamente?",
+                options: ["Se não chove, então não faz frio.", "Se não faz frio, então não chove.", "Chove e faz frio.", "Não chove e não faz frio.", "Faz frio e não chove."],
+                correctAnswerIndex: 1,
+                explanation: "A equivalência lógica de 'Se P, então Q' é 'Se não Q, então não P' (contrapositiva). Portanto, 'Se não faz frio, então não chove'."
+            },
+            {
+                question: "Qual a média aritmética dos números 10, 15, 20, 25?",
+                options: ["15", "17.5", "20", "22.5", "25"],
+                correctAnswerIndex: 1,
+                explanation: "A média aritmética é a soma dos números dividida pela quantidade de números. (10 + 15 + 20 + 25) / 4 = 70 / 4 = 17.5."
+            },
+            {
+                question: "Se A é maior que B, e B é maior que C, então:",
+                options: ["C é maior que A", "A é igual a C", "C é menor que A", "B é menor que C", "A é menor que B"],
+                correctAnswerIndex: 2,
+                explanation: "Se A > B e B > C, por transitividade, A é maior que C. Consequentemente, C é menor que A."
+            },
+            { // Added to reach 80 questions
+                question: "Em um grupo de 50 pessoas, 30 falam inglês e 20 falam espanhol. Se 10 pessoas falam ambos os idiomas, quantas pessoas não falam nenhum dos dois?",
+                options: ["0", "5", "10", "15", "20"],
+                correctAnswerIndex: 2,
+                explanation: "Número de pessoas que falam inglês ou espanhol = (pessoas que falam inglês) + (pessoas que falam espanhol) - (pessoas que falam ambos) = 30 + 20 - 10 = 40. Se o total é 50, então 50 - 40 = 10 pessoas não falam nenhum dos dois."
+            },
+
+            // Noções de Informática (11 questões)
+            {
+                question: "Qual das opções abaixo é um software de planilha eletrônica?",
+                options: ["Microsoft Word", "Google Chrome", "Microsoft Excel", "Adobe Photoshop", "Mozilla Firefox"],
+                correctAnswerIndex: 2,
+                explanation: "Microsoft Excel é um software amplamente conhecido para criação e edição de planilhas eletrônicas."
+            },
+            {
+                question: "A sigla 'CPU' em informática significa:",
+                options: ["Central Processing Unit", "Central Power Unit", "Computer Personal User", "Control Panel Unit", "Core Processing Utility"],
+                correctAnswerIndex: 0,
+                explanation: "CPU significa Central Processing Unit (Unidade Central de Processamento), que é o 'cérebro' do computador."
+            },
+            {
+                question: "Qual é a principal função de um firewall em segurança da informação?",
+                options: ["Acelerar a internet", "Proteger contra vírus de macro", "Monitorar e controlar o tráfego de rede", "Otimizar o desempenho do sistema", "Gerenciar senhas de usuário"],
+                correctAnswerIndex: 2,
+                explanation: "Um firewall atua como uma barreira entre sua rede interna e redes externas (como a internet), monitorando e controlando o tráfego para evitar acessos não autorizados."
+            },
+            {
+                question: "Em um e-mail, qual campo é usado para enviar uma cópia da mensagem a outros destinatários, sem que os endereços desses destinatários sejam visíveis para os demais?",
+                options: ["Para (To)", "Cc (Com Cópia)", "Cco (Com Cópia Oculta)", "Assunto (Subject)", "Anexo (Attachment)"],
+                correctAnswerIndex: 2,
+                explanation: "O campo Cco (Com Cópia Oculta) ou BCC (Blind Carbon Copy) permite enviar cópias para destinatários cujos endereços não serão visíveis para os outros recebedores."
+            },
+            {
+                question: "Qual o atalho de teclado universal para 'copiar' um item?",
+                options: ["Ctrl + X", "Ctrl + V", "Ctrl + Z", "Ctrl + C", "Ctrl + P"],
+                correctAnswerIndex: 3,
+                explanation: "Ctrl + C é o atalho de teclado padrão para copiar o item selecionado."
+            },
+            {
+                question: "Qual tipo de malware se disfarça como um programa legítimo para enganar o usuário?",
+                options: ["Vírus", "Worm", "Spyware", "Cavalo de Troia", "Adware"],
+                correctAnswerIndex: 3,
+                explanation: "Um Cavalo de Troia (Trojan Horse) é um tipo de malware que se apresenta como um software útil e legítimo para enganar o usuário e ser instalado."
+            },
+            {
+                question: "No contexto de redes de computadores, o que significa a sigla 'HTTP'?",
+                options: ["HyperText Transfer Protocol", "High Technology Transfer Process", "Hyperlink Text Transmission Protocol", "Home Transferring Technical Program", "Host to Host Transfer Protocol"],
+                correctAnswerIndex: 0,
+                explanation: "HTTP significa HyperText Transfer Protocol, um protocolo fundamental para a comunicação na World Wide Web."
+            },
+            {
+                question: "Qual das opções é um navegador de internet?",
+                options: ["Microsoft Word", "Adobe Acrobat", "Mozilla Firefox", "VLC Media Player", "WinRAR"],
+                correctAnswerIndex: 2,
+                explanation: "Mozilla Firefox é um popular navegador de internet, utilizado para acessar páginas web."
+            },
+            {
+                question: "Qual dispositivo é considerado de saída em um computador?",
+                options: ["Teclado", "Mouse", "Microfone", "Impressora", "Scanner"],
+                correctAnswerIndex: 3,
+                explanation: "A impressora é um dispositivo de saída, pois ela recebe dados do computador e os imprime em papel."
+            },
+            {
+                question: "O que é 'phishing' em segurança da informação?",
+                options: ["Um tipo de antivírus", "Um software de compactação", "Uma técnica de fraude para obter dados pessoais", "Um sistema de criptografia", "Um método de backup de dados"],
+                correctAnswerIndex: 2,
+                explanation: "Phishing é uma técnica de engenharia social onde criminosos tentam obter informações confidenciais (senhas, dados bancários) disfarçando-se como entidades confiáveis em comunicações eletrônicas."
+            },
+            { // Added to reach 80 questions
+                question: "No Microsoft Word, qual a finalidade da ferramenta 'Quebra de Página'?",
+                options: ["Inserir uma nova linha.", "Alterar a orientação da página.", "Forçar o texto seguinte a iniciar em uma nova página.", "Dividir o documento em duas colunas.", "Duplicar a página atual."],
+                correctAnswerIndex: 2,
+                explanation: "A quebra de página permite iniciar uma nova página no documento a partir do ponto onde o cursor está posicionado, independentemente do espaço restante na página atual."
+            },
+
+            // Legislação (9 questões)
+            {
+                question: "Conforme a Lei nº 8.112/90, qual o prazo de validade do concurso público, prorrogável uma única vez, por igual período?",
+                options: ["1 ano", "2 anos", "3 anos", "4 anos", "5 anos"],
+                correctAnswerIndex: 1,
+                explanation: "A Lei nº 8.112/90 estabelece que o prazo de validade do concurso público é de até dois anos, prorrogável uma única vez, por igual período (ou seja, por mais dois anos)."
+            },
+            {
+                question: "A Constituição Federal de 1988 estabelece que a lei não prejudicará o direito adquirido, o ato jurídico perfeito e a:",
+                options: ["Coisa julgada", "Sentença judicial", "Decisão administrativa", "Súmula vinculante", "Dignidade da pessoa humana"],
+                correctAnswerIndex: 0,
+                explanation: "O Art. 5º, XXXVI, da CF/88, garante que 'a lei não prejudicará o direito adquirido, o ato jurídico perfeito e a coisa julgada'."
+            },
+            {
+                question: "De acordo com a Lei de Acesso à Informação (Lei nº 12.527/2011), o sigilo de informações consideradas imprescindíveis à segurança da sociedade ou do Estado pode ser classificado em ultrassecreto, secreto e:",
+                options: ["Confidencial", "Restrito", "Reservado", "Público", "Temporário"],
+                correctAnswerIndex: 0,
+                explanation: "A Lei nº 12.527/2011 (LAI) classifica as informações sigilosas em ultrassecreta, secreta e confidencial."
+            },
+            {
+                question: "A Lei nº 8.429/92 (Lei de Improbidade Administrativa) trata das sanções aplicáveis aos agentes públicos nos casos de enriquecimento ilícito no exercício de mandato, cargo, emprego ou função na administração pública. Qual dos princípios abaixo não é diretamente violado por um ato de improbidade administrativa?",
+                options: ["Legalidade", "Impessoalidade", "Moralidade", "Publicidade", "Duração razoável do processo"],
+                correctAnswerIndex: 4,
+                explanation: "Os atos de improbidade administrativa violam diretamente os princípios da legalidade, impessoalidade, moralidade e publicidade. O princípio da duração razoável do processo está mais ligado à celeridade processual."
+            },
+            {
+                question: "A Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos) revogou, dentre outras leis, a Lei nº 8.666/93. Qual das modalidades de licitação abaixo NÃO está prevista na nova lei?",
+                options: ["Concorrência", "Pregão", "Concurso", "Tomada de Preços", "Diálogo Competitivo"],
+                correctAnswerIndex: 3,
+                explanation: "A Lei nº 14.133/2021 (Nova Lei de Licitações) não prevê a modalidade 'Tomada de Preços'. As modalidades são: pregão, concorrência, concurso, leilão e diálogo competitivo."
+            },
+            {
+                question: "No âmbito da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados - LGPD), o que é o 'titular de dados'?",
+                options: ["A pessoa física a quem se referem os dados pessoais que são objeto de tratamento.", "A pessoa jurídica de direito público que realiza o tratamento de dados.", "O órgão de segurança pública responsável pela fiscalização da lei.", "A empresa que coleta os dados dos usuários.", "O servidor público que armazena os dados."],
+                correctAnswerIndex: 0,
+                explanation: "O titular de dados é a pessoa natural (física) a quem se referem os dados pessoais que são objeto de tratamento, conforme definido na LGPD."
+            },
+            {
+                question: "Qual o princípio da administração pública que exige que os atos administrativos sejam praticados para atender ao interesse público, e não a interesses privados?",
+                options: ["Legalidade", "Impessoalidade", "Moralidade", "Publicidade", "Eficiência"],
+                correctAnswerIndex: 1,
+                explanation: "O princípio da impessoalidade exige que a atuação da Administração Pública seja voltada para o interesse público, sem favorecimentos ou perseguições pessoais."
+            },
+            {
+                question: "Conforme a Lei nº 9.784/99, que regula o processo administrativo no âmbito da Administração Pública Federal, os prazos processuais são contados em dias:",
+                options: ["Corridos", "Úteis", "Úteis, exceto sábados e domingos", "Corridos, exceto feriados", "A critério da autoridade"],
+                correctAnswerIndex: 1,
+                explanation: "A Lei nº 9.784/99 estabelece que os prazos são contados em dias úteis, excluindo-se o dia do começo e incluindo-se o do vencimento."
+            },
+            { // Added to reach 80 questions
+                question: "De acordo com a Lei de Improbidade Administrativa (Lei nº 8.429/92), o ressarcimento integral do dano causado ao erário é uma sanção para qual tipo de ato de improbidade?",
+                options: ["Atos que importam enriquecimento ilícito", "Atos que causam prejuízo ao erário", "Atos que atentam contra os princípios da administração pública", "Todos os tipos de atos de improbidade", "Nenhuma das alternativas"],
+                correctAnswerIndex: 1,
+                explanation: "O ressarcimento integral do dano é uma sanção específica para os atos de improbidade que causam prejuízo ao erário, conforme o Art. 12 da Lei nº 8.429/92."
+            },
+
+            // Noções de Direito Constitucional (8 questões)
+            {
+                question: "Qual dos seguintes não é considerado um Poder da União, conforme a Constituição Federal de 1988?",
+                options: ["Poder Legislativo", "Poder Executivo", "Poder Judiciário", "Poder Moderador", "Todos são Poderes"],
+                correctAnswerIndex: 3,
+                explanation: "A Constituição Federal de 1988 estabelece os Poderes da União como Legislativo, Executivo e Judiciário. O Poder Moderador existia na Constituição do Império."
+            },
+            {
+                question: "O direito à vida é um direito fundamental. Em qual artigo da Constituição Federal ele está expresso?",
+                options: ["Art. 1º", "Art. 2º", "Art. 3º", "Art. 4º", "Art. 5º"],
+                correctAnswerIndex: 4,
+                explanation: "O direito à vida é um dos direitos e deveres individuais e coletivos, previstos no Art. 5º, caput, da Constituição Federal."
+            },
+            {
+                question: "O habeas corpus é um remédio constitucional que visa proteger qual direito fundamental?",
+                options: ["Direito de propriedade", "Direito à liberdade de locomoção", "Direito à saúde", "Direito à educação", "Direito de reunião"],
+                correctAnswerIndex: 1,
+                explanation: "O habeas corpus é um instrumento jurídico que visa proteger o direito de ir, vir e permanecer, ou seja, a liberdade de locomoção."
+            },
+            {
+                question: "A Constituição Federal estabelece que a soberania popular será exercida pelo sufrágio universal e pelo voto direto e secreto, com valor igual para todos, e, nos termos da lei, mediante:",
+                options: ["Plebiscito, referendo e iniciativa popular", "Ação popular e mandado de segurança", "Habeas data e habeas corpus", "Recurso extraordinário e recurso especial", "Ação civil pública e ação de improbidade"],
+                correctAnswerIndex: 0,
+                explanation: "O Art. 14 da CF/88 dispõe que a soberania popular será exercida pelo sufrágio universal e pelo voto direto e secreto, com valor igual para todos, e, nos termos da lei, mediante plebiscito, referendo e iniciativa popular."
+            },
+            {
+                question: "Qual o número mínimo de Deputados Federais para propor uma emenda à Constituição (PEC)?",
+                options: ["1/3 dos membros de qualquer das Casas do Congresso Nacional", "2/3 dos membros da Câmara dos Deputados", "1/2 dos membros do Senado Federal", "Maioria absoluta dos membros do Congresso Nacional", "Não há número mínimo, basta a assinatura de um Deputado"],
+                correctAnswerIndex: 0,
+                explanation: "A proposta de emenda à Constituição pode ser apresentada por, no mínimo, um terço dos membros da Câmara dos Deputados ou do Senado Federal (Art. 60, I, da CF/88)."
+            },
+            {
+                question: "O princípio da legalidade, no direito administrativo, significa que a administração pública só pode fazer aquilo que a lei:",
+                options: ["Permite", "Não proíbe", "Sugere", "Implicitamente autoriza", "Não menciona"],
+                correctAnswerIndex: 0,
+                explanation: "No Direito Administrativo, o princípio da legalidade significa que a Administração Pública só pode agir se houver lei que a autorize, ou seja, ela só pode fazer o que a lei permite."
+            },
+            {
+                question: "Os Direitos Sociais estão previstos a partir de qual artigo da Constituição Federal de 1988?",
+                options: ["Art. 1º", "Art. 5º", "Art. 6º", "Art. 17", "Art. 37"],
+                correctAnswerIndex: 2,
+                explanation: "Os Direitos Sociais estão previstos no Título II, Capítulo II, da Constituição Federal, a partir do Art. 6º."
+            },
+            { // Added to reach 80 questions
+                question: "A garantia constitucional da 'inamovibilidade' dos juízes significa que:",
+                options: ["Não podem ser removidos de seus cargos por ato discricionário, salvo por interesse público e com decisão de dois terços do tribunal a que pertencerem.", "Podem ser removidos livremente a qualquer momento.", "Não podem ser processados por crimes comuns.", "Têm direito a férias remuneradas em dobro.", "Não podem ter seus salários reduzidos."],
+                correctAnswerIndex: 0,
+                explanation: "A inamovibilidade dos juízes é uma garantia que impede sua remoção por ato discricionário da administração, assegurando sua independência (Art. 95, I, da CF/88)."
+            },
+
+            // Noções de Direito Administrativo (8 questões)
+            {
+                question: "Qual o atributo do ato administrativo que permite à Administração Pública executá-lo diretamente, sem a necessidade de intervenção judicial?",
+                options: ["Presunção de legitimidade", "Autoexecutoriedade", "Tipicidade", "Imperatividade", "Revogabilidade"],
+                correctAnswerIndex: 1,
+                explanation: "A autoexecutoriedade é o atributo que permite à Administração Pública executar seus atos diretamente, sem prévia autorização do Poder Judiciário."
+            },
+            {
+                question: "Os bens públicos de uso comum do povo são aqueles destinados à utilização por todos, sem restrições. Um exemplo é:",
+                options: ["Um edifício de repartição pública", "Um veículo oficial", "Uma praça pública", "Um terreno de marinha", "Uma rodovia federal"],
+                correctAnswerIndex: 2,
+                explanation: "Praças públicas são exemplos clássicos de bens públicos de uso comum do povo, abertos à utilização por toda a coletividade."
+            },
+            {
+                question: "A Lei nº 8.429/92 (Lei de Improbidade Administrativa) classifica os atos de improbidade em três categorias. Qual das opções abaixo NÃO é uma dessas categorias?",
+                options: ["Atos que importam enriquecimento ilícito", "Atos que causam prejuízo ao erário", "Atos que atentam contra os princípios da administração pública", "Atos que implicam renúncia de receita", "Atos de abuso de poder"],
+                correctAnswerIndex: 3,
+                explanation: "As três categorias de atos de improbidade administrativa são: atos que importam enriquecimento ilícito, atos que causam prejuízo ao erário e atos que atentam contra os princípios da administração pública. 'Atos que implicam renúncia de receita' não é uma categoria autônoma."
+            },
+            {
+                question: "Qual o nome do ato pelo qual a Administração Pública declara a invalidade de um ato administrativo ilegítimo ou ilegal, com efeitos retroativos?",
+                options: ["Revogação", "Anulação", "Convalidação", "Caducidade", "Desfazimento"],
+                correctAnswerIndex: 1,
+                explanation: "A anulação é o ato pelo qual a Administração (ou o Poder Judiciário) declara a invalidade de um ato administrativo que nasceu com vício de legalidade, com efeitos 'ex tunc' (retroativos)."
+            },
+            {
+                question: "O princípio da publicidade, na administração pública, exige que os atos administrativos sejam divulgados. Qual a principal exceção a esse princípio?",
+                options: ["Atos de menor importância", "Atos que tratam de segurança nacional ou intimidade", "Atos que dependem de aprovação judicial", "Atos discricionários", "Atos sem efeito externo"],
+                correctAnswerIndex: 1,
+                explanation: "O princípio da publicidade pode ser mitigado em casos de segurança da sociedade ou do Estado, ou para a preservação da intimidade, vida privada, honra e imagem das pessoas."
+            },
+            {
+                question: "Qual o instrumento utilizado pela Administração Pública para delegar a execução de um serviço público a uma pessoa jurídica de direito privado, mediante licitação?",
+                options: ["Permissão", "Autorização", "Concessão", "Convênio", "Contrato de gestão"],
+                correctAnswerIndex: 2,
+                explanation: "A concessão de serviço público é o instrumento pelo qual a Administração Pública delega, mediante licitação, a execução de um serviço público a pessoa jurídica ou consórcio de empresas, que o executará por sua conta e risco, por prazo determinado."
+            },
+            {
+                question: "Noções de Direito Administrativo: Qual a característica que torna um ato administrativo irretocável pela própria Administração, em razão do decurso do tempo ou da consolidação de direitos?",
+                options: ["Imperatividade", "Autoexecutoriedade", "Presunção de legitimidade", "Estabilidade", "Perpetuidade"],
+                correctAnswerIndex: 3,
+                explanation: "A estabilidade de um ato administrativo se refere à sua permanência e impossibilidade de ser revogado ou anulado, muitas vezes devido à consumação de seus efeitos ou decurso de prazo."
+            },
+            { // Added to reach 80 questions
+                question: "Qual a diferença entre desconcentração e descentralização administrativa?",
+                options: ["Desconcentração é a distribuição interna de competências, enquanto descentralização é a criação de novas entidades.", "Desconcentração é a criação de novas entidades, enquanto descentralização é a distribuição interna de competências.", "Ambas significam a mesma coisa.", "Desconcentração envolve delegação, descentralização não.", "Descentralização é vertical, desconcentração é horizontal."],
+                correctAnswerIndex: 0,
+                explanation: "Desconcentração é a distribuição de competências dentro da mesma pessoa jurídica (criação de órgãos). Descentralização é a distribuição de competências para outras pessoas jurídicas (criação de autarquias, fundações, etc.)."
+            },
+
+            // Noções de Direito Civil (8 questões)
+            {
+                question: "Conforme o Código Civil brasileiro, qual a idade em que uma pessoa atinge a maioridade civil, tornando-se plenamente capaz para todos os atos da vida civil?",
+                options: ["16 anos", "18 anos", "21 anos", "14 anos", "12 anos"],
+                correctAnswerIndex: 1,
+                explanation: "O Art. 5º do Código Civil estabelece que a menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil."
+            },
+            {
+                question: "Qual o vício do consentimento que ocorre quando uma das partes declara sua vontade por engano, sem que a outra parte tenha agido com malícia?",
+                options: ["Dolo", "Coação", "Lesão", "Erro", "Estado de perigo"],
+                correctAnswerIndex: 3,
+                explanation: "O erro é um vício do consentimento em que o declarante se engana sobre a substância do negócio, o objeto principal ou a qualidade essencial da pessoa, sem que haja má-fé da outra parte."
+            },
+            {
+                question: "A extinção da obrigação pelo pagamento é a forma mais comum. Qual o instituto que permite ao devedor depositar a coisa devida em juízo quando o credor se recusa a recebê-la?",
+                options: ["Novação", "Compensação", "Cessão de crédito", "Consignação em pagamento", "Remissão"],
+                correctAnswerIndex: 3,
+                explanation: "A consignação em pagamento permite ao devedor liberar-se da obrigação quando o credor se recusa a receber o pagamento, não o recebe ou há dúvida sobre quem deve receber, depositando a quantia ou a coisa devida em juízo."
+            },
+            {
+                question: "No direito civil, o que é um 'bem imóvel por natureza'?",
+                options: ["Um bem que pode ser movido sem dano", "Um bem que é incorporado artificialmente ao solo", "Um bem que não pode ser removido sem destruição ou alteração", "Um bem que se move por força própria", "Um bem que é considerado imóvel por determinação legal"],
+                correctAnswerIndex: 2,
+                explanation: "Bens imóveis por natureza são o solo e tudo o que se lhe incorpora naturalmente, como árvores e frutos pendentes, não podendo ser removidos sem destruição ou alteração da substância."
+            },
+            {
+                question: "Qual o instituto que extingue a pretensão de exigir um direito pelo decurso do tempo, sem que o direito em si seja extinto?",
+                options: ["Decadência", "Prescrição", "Perempção", "Preclusão", "Anulação"],
+                correctAnswerIndex: 1,
+                explanation: "A prescrição é a perda do direito de ação (pretensão) pelo decurso do tempo, devido à inércia do titular. O direito material (a dívida, por exemplo) continua existindo, mas não pode ser cobrado judicialmente."
+            },
+            {
+                question: "Qual a modalidade de testamento que pode ser feito por qualquer pessoa, com a presença de duas testemunhas, sem a necessidade de tabelião?",
+                options: ["Público", "Cerrado", "Particular", "Marítimo", "Aeronáutico"],
+                correctAnswerIndex: 2,
+                explanation: "O testamento particular é escrito pelo próprio testador ou por alguém a seu rogo, lido por ele na presença de três testemunhas, que o subscrevem. Não exige a intervenção de tabelião."
+            },
+            {
+                question: "No contrato de compra e venda, qual o vício redibitório?",
+                options: ["Um defeito oculto que torna a coisa imprópria ao uso ou lhe diminui o valor.", "Um defeito visível no momento da entrega.", "Uma cláusula contratual abusiva.", "A falta de pagamento do preço.", "O arrependimento do comprador."],
+                correctAnswerIndex: 0,
+                explanation: "Vícios redibitórios são defeitos ocultos que tornam a coisa imprópria ao uso a que é destinada ou lhe diminuem o valor, de modo que o adquirente não a teria adquirido ou a teria adquirido por preço menor se os soubesse."
+            },
+            { // Added to reach 80 questions
+                question: "Conforme o Código Civil, a incapacidade relativa cessa aos quantos anos, em regra?",
+                options: ["16 anos", "18 anos", "21 anos", "14 anos", "12 anos"],
+                correctAnswerIndex: 1,
+                explanation: "A incapacidade relativa, em regra, cessa quando a pessoa atinge 18 anos, tornando-se plenamente capaz. Há exceções como a emancipação."
+            },
+
+            // Noções de Direito Processual Civil (8 questões)
+            {
+                question: "De acordo com o Código de Processo Civil, qual o nome da petição inicial que é indeferida pelo juiz por não preencher os requisitos legais ou por ser inepta?",
+                options: ["Contestação", "Réplica", "Recurso", "Emenda à inicial", "Petição inicial inepta"],
+                correctAnswerIndex: 4,
+                explanation: "Uma petição inicial inepta é aquela que não preenche os requisitos legais essenciais para a sua validade, impedindo o desenvolvimento regular do processo."
+            },
+            {
+                question: "Qual o meio de prova que consiste na inspeção judicial realizada pelo juiz em local, pessoa ou coisa, para esclarecimento de fato que interesse à causa?",
+                options: ["Depoimento pessoal", "Confissão", "Testemunha", "Perícia", "Inspeção judicial"],
+                correctAnswerIndex: 4,
+                explanation: "A inspeção judicial é um meio de prova em que o juiz, pessoalmente, verifica um fato, pessoa ou coisa que seja relevante para a resolução do caso."
+            },
+            {
+                question: "O que é 'litisconsórcio' no processo civil?",
+                options: ["A intervenção de terceiros no processo.", "A reunião de várias ações em um único processo.", "A pluralidade de partes no mesmo polo da relação processual.", "O conflito de competência entre juízos.", "A suspensão do processo por convenção das partes."],
+                correctAnswerIndex: 2,
+                explanation: "Litisconsórcio ocorre quando há pluralidade de partes em um dos polos da relação processual (litisconsórcio ativo ou passivo), ou em ambos (litisconsórcio misto)."
+            },
+            {
+                question: "Qual o prazo para a parte interpor recurso de apelação contra uma sentença, no processo civil, salvo disposição em contrário?",
+                options: ["5 dias", "10 dias", "15 dias", "30 dias", "Não há prazo fixo"],
+                correctAnswerIndex: 2,
+                explanation: "O prazo para interpor o recurso de apelação é de 15 dias úteis, contados da intimação da sentença, conforme o Código de Processo Civil."
+            },
+            {
+                question: "A ausência de qual pressuposto processual impede a constituição válida e regular do processo, levando à sua extinção sem resolução de mérito?",
+                options: ["Interesse de agir", "Legitimidade das partes", "Possibilidade jurídica do pedido", "Capacidade postulatória", "Citação válida"],
+                correctAnswerIndex: 4,
+                explanation: "A citação válida é um pressuposto de existência e de desenvolvimento válido e regular do processo. Sem ela, o processo não se constitui validamente."
+            },
+            {
+                question: "Qual o nome do instituto que permite a uma pessoa que não é parte no processo intervir, em defesa de interesse próprio, relacionado ao objeto da demanda?",
+                options: ["Assistência", "Denunciação da lide", "Chamamento ao processo", "Amicus curiae", "Desconsideração da personalidade jurídica"],
+                correctAnswerIndex: 0,
+                explanation: "A assistência é uma modalidade de intervenção de terceiros em que uma pessoa, não sendo parte, ingressa no processo para auxiliar uma das partes, pois possui interesse jurídico na vitória daquela parte."
+            },
+            {
+                question: "O que significa 'coisa julgada' no processo civil?",
+                options: ["A decisão judicial que ainda cabe recurso.", "A decisão judicial irrecorrível, sobre a qual não há mais possibilidade de discussão.", "A sentença que homologa um acordo entre as partes.", "A decisão que extingue o processo sem resolução de mérito.", "A decisão provisória proferida em caráter de urgência."],
+                correctAnswerIndex: 1,
+                explanation: "A coisa julgada é a qualidade da sentença que a torna imutável e indiscutível, não podendo mais ser modificada por meio de recurso. Garante a segurança jurídica."
+            },
+            { // Added to reach 80 questions
+                question: "No processo de execução, o que é penhora?",
+                options: ["A fase inicial do processo.", "A apreensão judicial de bens do devedor para garantir o pagamento da dívida.", "O ato de intimação do executado.", "A venda dos bens do devedor em leilão.", "A extinção da dívida."],
+                correctAnswerIndex: 1,
+                explanation: "A penhora é o ato judicial de individualizar e apreender bens do devedor para assegurar o cumprimento de uma obrigação, garantindo a execução forçada."
+            },
+
+            // Noções de Direito Penal (8 questões)
+            {
+                question: "Qual o princípio do Direito Penal que estabelece que não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal?",
+                options: ["Princípio da culpabilidade", "Princípio da individualização da pena", "Princípio da legalidade", "Princípio da intranscendência da pena", "Princípio da ofensividade"],
+                correctAnswerIndex: 2,
+                explanation: "O Princípio da Legalidade (ou da Reserva Legal) é basilar no Direito Penal, expresso no Art. 1º do Código Penal e no Art. 5º, XXXIX da CF/88: 'não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal'."
+            },
+            {
+                question: "A legítima defesa é uma excludente de ilicitude. Para que ela seja configurada, é necessário o uso moderado dos meios necessários para repelir injusta agressão, atual ou iminente, a direito próprio ou de:",
+                options: ["Terceiro", "Somente próprio", "Da coletividade", "Do Estado", "De qualquer pessoa, mesmo que não seja parente"],
+                correctAnswerIndex: 0,
+                explanation: "A legítima defesa pode ser exercida para repelir injusta agressão a direito próprio ou de terceiro, conforme o Art. 25 do Código Penal."
+            },
+            {
+                question: "Qual a modalidade de culpa em que o agente, por imprudência, negligência ou imperícia, dá causa a um resultado que não queria produzir?",
+                options: ["Dolo direto", "Dolo eventual", "Culpa consciente", "Culpa inconsciente", "Preterdolo"],
+                correctAnswerIndex: 3,
+                explanation: "Na culpa inconsciente, o agente não prevê o resultado, mas deveria prevê-lo e, por sua desatenção (imprudência, negligência ou imperícia), o causa."
+            },
+            {
+                question: "No crime de furto, qual o elemento subjetivo do tipo penal que se refere à intenção do agente de ter a coisa para si ou para outrem, de forma definitiva?",
+                options: ["Animus necandi", "Animus laedendi", "Animus furandi", "Animus abutendi", "Animus solvendi"],
+                correctAnswerIndex: 2,
+                explanation: "'Animus furandi' é a expressão latina que designa a intenção de assenhorear-se de coisa alheia, ou seja, a intenção de furtar."
+            },
+            {
+                question: "O que é 'concurso de pessoas' no Direito Penal?",
+                options: ["A prática de crimes em diferentes localidades.", "A participação de várias pessoas na prática da mesma infração penal.", "A ocorrência de vários crimes por um único agente.", "A soma de penas de diferentes crimes.", "A conexão entre diferentes processos criminais."],
+                correctAnswerIndex: 1,
+                explanation: "Concurso de pessoas ocorre quando duas ou mais pessoas, agindo com liame subjetivo, contribuem para a prática de uma mesma infração penal."
+            },
+            {
+                question: "Qual a causa de extinção da punibilidade que ocorre quando o Estado perde o direito de punir pelo decurso do tempo, sem que a pena tenha sido aplicada ou executada?",
+                options: ["Decadência", "Perempção", "Prescrição", "Anistia", "Graça"],
+                correctAnswerIndex: 2,
+                explanation: "A prescrição é uma causa de extinção da punibilidade em que o Estado perde o direito de aplicar ou executar a pena devido ao decurso de determinado prazo legal."
+            },
+            {
+                question: "No crime de homicídio, qual a circunstância que o torna qualificado?",
+                options: ["Ter sido cometido com emprego de veneno, fogo, explosivo, asfixia, tortura ou outro meio insidioso ou cruel, ou de que possa resultar perigo comum.", "Ter sido cometido por motivo fútil.", "Ter sido cometido em legítima defesa.", "Ter sido cometido por erro de execução.", "Ter sido cometido em estado de necessidade."],
+                correctAnswerIndex: 0,
+                explanation: "O uso de meios cruéis ou que gerem perigo comum (veneno, fogo, explosivo, asfixia, tortura) são qualificadoras do homicídio, aumentando a pena, conforme o Art. 121, §2º, III, do Código Penal."
+            },
+            { // Added to reach 80 questions
+                question: "Qual o crime que consiste em enganar alguém para obter vantagem ilícita, causando prejuízo a outrem?",
+                options: ["Furto", "Roubo", "Estelionato", "Apropriação indébita", "Extorsão"],
+                correctAnswerIndex: 2,
+                explanation: "O estelionato (Art. 171 do CP) é o crime onde o agente, utilizando-se de fraude, ardil ou qualquer outro meio fraudulento, induz ou mantém a vítima em erro para obter vantagem ilícita para si ou para outrem, causando prejuízo à vítima."
+            },
+
+            // Noções de Direito Processual Penal (8 questões)
+            {
+                question: "Qual a fase do processo penal em que são produzidas as provas, ouvidas as testemunhas e realizado o interrogatório do acusado?",
+                options: ["Inquérito policial", "Fase postulatória", "Instrução criminal", "Sentença", "Recursos"],
+                correctAnswerIndex: 2,
+                explanation: "A instrução criminal é a fase processual destinada à produção das provas, à oitiva das testemunhas e ao interrogatório do acusado, visando à formação do convencimento do juiz."
+            },
+            {
+                question: "O que é 'habeas data' no processo penal?",
+                options: ["Um remédio constitucional para proteger o direito de locomoção.", "Um instrumento para obter acesso a informações pessoais constantes de bancos de dados governamentais.", "Um recurso contra decisões judiciais.", "Uma ação para anular atos administrativos.", "Um tipo de prisão provisória."],
+                correctAnswerIndex: 1,
+                explanation: "O habeas data é um remédio constitucional que assegura ao indivíduo o acesso a informações sobre si mesmo, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público, bem como para a retificação de dados."
+            },
+            {
+                question: "Qual o princípio que proíbe que uma pessoa seja julgada mais de uma vez pelo mesmo fato criminoso?",
+                options: ["Duplo grau de jurisdição", "Devido processo legal", "Ampla defesa", "Contraditório", "Non bis in idem"],
+                correctAnswerIndex: 4,
+                explanation: "O princípio do 'non bis in idem' (não duas vezes pela mesma coisa) impede que uma pessoa seja processada ou julgada novamente pelo mesmo fato criminoso, uma vez que já houve uma decisão final."
+            },
+            {
+                question: "A prisão em flagrante delito pode ser realizada por qualquer do povo ou pela autoridade policial e seus agentes. Em qual situação a prisão em flagrante é considerada 'própria'?",
+                options: ["Quando o agente é perseguido, logo após a prática da infração.", "Quando o agente é encontrado logo depois com instrumentos do crime.", "Quando o agente está cometendo a infração ou acaba de cometê-la.", "Quando há mandado de prisão expedido pela autoridade judicial.", "Quando o agente se entrega voluntariamente à polícia."],
+                correctAnswerIndex: 2,
+                explanation: "A prisão em flagrante própria (ou perfeita) ocorre quando o agente está cometendo a infração penal ou acaba de cometê-la."
+            },
+            {
+                question: "Qual o recurso cabível contra a decisão que pronuncia o réu no procedimento do Tribunal do Júri?",
+                options: ["Apelação", "Recurso em Sentido Estrito (RESE)", "Agravo de instrumento", "Habeas corpus", "Embargos de declaração"],
+                correctAnswerIndex: 1,
+                explanation: "O recurso cabível contra a decisão de pronúncia no procedimento do Tribunal do Júri é o Recurso em Sentido Estrito (RESE), conforme o Art. 581, IV, do Código de Processo Penal."
+            },
+            {
+                question: "No processo penal, o que é 'nulidade absoluta'?",
+                options: ["Um vício sanável que não causa prejuízo.", "Um defeito que pode ser convalidado pelas partes.", "Um vício grave que atinge a ordem pública e não pode ser sanado, gerando a invalidação do ato ou do processo.", "Um erro de forma que não afeta o conteúdo da decisão.", "Um vício que só pode ser arguido pela parte prejudicada."],
+                correctAnswerIndex: 2,
+                explanation: "A nulidade absoluta é um vício insanável, que viola princípios fundamentais do processo e pode ser declarada de ofício pelo juiz a qualquer tempo, gerando a invalidação do ato processual ou de todo o processo."
+            },
+            {
+                question: "O Ministério Público é o titular da ação penal pública. O que acontece se o Ministério Público não oferece denúncia no prazo legal, sem justificativa?",
+                options: ["O processo é arquivado automaticamente.", "A ação penal privada subsidiária da pública pode ser ajuizada.", "O juiz pode requisitar o oferecimento da denúncia.", "O inquérito policial é anulado.", "O réu é automaticamente absolvido."],
+                correctAnswerIndex: 1,
+                explanation: "Se o Ministério Público não oferecer a denúncia no prazo legal, a ação penal privada subsidiária da pública poderá ser ajuizada, conforme o Art. 29 do Código de Processo Penal e Art. 5º, LIX, da CF/88."
+            },
+            { // Added to reach 80 questions
+                question: "Qual a finalidade principal do inquérito policial?",
+                options: ["Julgar o acusado.", "Reunir provas e informações para subsidiar a ação penal.", "Aplicar a pena.", "Garantir a ampla defesa.", "Decidir sobre a prisão preventiva."],
+                correctAnswerIndex: 1,
+                explanation: "O inquérito policial tem como principal finalidade a coleta de elementos de informação e provas que possam subsidiar a futura ação penal, servindo de base para a denúncia ou queixa."
+            }
+        ];
+
+        // Ensure rawQuestions always have originalIndex for consistent mapping
+        const questionsWithOriginalIndex = rawQuestions.map((q, i) => ({ ...q, originalIndex: i }));
+
+        let currentQuestionIndex = 0; // Current question index
+        // Stores user's selected answers mapped by originalIndex
+        // undefined means not answered or skipped
+        let userAnswers = Array(questionsWithOriginalIndex.length).fill(undefined);
+        let correctAnswersCount = 0; // Correct answers counter
+        // This array will hold the current order of questions, which can change due to 'skip'
+        let currentQuestionsOrder = [...questionsWithOriginalIndex];
+        let isQuizFinished = false; // New state variable for quiz finished status
+
+        // Mapping of DOM elements
+        const questionNumberSpan = document.getElementById('current-question-number');
+        const questionText = document.getElementById('question-text');
+        const optionsContainer = document.getElementById('options-container');
+        const nextButton = document.getElementById('next-button');
+        const skipButton = document.getElementById('skip-button');
+        const finishButton = document.getElementById('finish-button');
+        const quizContainer = document.getElementById('quiz-container');
+        const questionSection = document.getElementById('question-section');
+        const resultsSection = document.getElementById('results-section');
+        const scoreText = document.getElementById('score-text');
+        const answersReviewContainer = document.getElementById('answers-review-container');
+        const restartButton = document.getElementById('restart-button');
+
+        // Timer Elements
+        const timerDisplay = document.getElementById('timer-display');
+        const timerStartPauseButton = document.getElementById('timer-start-pause');
+        const timerResetButton = document.getElementById('timer-reset');
+
+        // Timer Variables
+        let timerInterval;
+        let startTime = 0; // Time when the timer started (in milliseconds)
+        let elapsedTime = 0; // Elapsed time when paused (in milliseconds)
+        let isRunning = false;
+
+        // Local Storage Keys
+        const LOCAL_STORAGE_QUIZ_STATE = 'quizState';
+        const LOCAL_STORAGE_TIMER_STATE = 'timerState';
+
+        /**
+         * Saves the current quiz state to local storage.
+         */
+        function saveQuizState() {
+            const state = {
+                currentQuestionIndex: currentQuestionIndex,
+                userAnswers: userAnswers,
+                currentQuestionsOrderOriginalIndices: currentQuestionsOrder.map(q => q.originalIndex),
+                isQuizFinished: isQuizFinished // Save the finished status
+            };
+            localStorage.setItem(LOCAL_STORAGE_QUIZ_STATE, JSON.stringify(state));
+        }
+
+        /**
+         * Loads the quiz state from local storage.
+         * @returns {boolean} True if a state was loaded, false otherwise.
+         */
+        function loadQuizState() {
+            const savedState = localStorage.getItem(LOCAL_STORAGE_QUIZ_STATE);
+            if (savedState) {
+                const state = JSON.parse(savedState);
+                currentQuestionIndex = state.currentQuestionIndex;
+                userAnswers = state.userAnswers;
+                isQuizFinished = state.isQuizFinished || false; // Load finished status
+
+                // Reconstruct the 'currentQuestionsOrder' array based on the saved order of original indices
+                if (state.currentQuestionsOrderOriginalIndices && state.currentQuestionsOrderOriginalIndices.length > 0) {
+                    currentQuestionsOrder = state.currentQuestionsOrderOriginalIndices.map(originalIdx => {
+                        const questionData = questionsWithOriginalIndex.find(q => q.originalIndex === originalIdx);
+                        return { ...questionData };
+                    });
+                }
+                return true;
+            }
+            return false;
+        }
+
+        /**
+         * Saves the current timer state to local storage.
+         */
+        function saveTimerState() {
+            const timerState = {
+                elapsedTime: elapsedTime,
+                isRunning: isRunning,
+                startTime: isRunning ? Date.now() - elapsedTime : 0 // Adjust startTime if running
+            };
+            localStorage.setItem(LOCAL_STORAGE_TIMER_STATE, JSON.stringify(timerState));
+        }
+
+        /**
+         * Loads the timer state from local storage.
+         * @returns {boolean} True if a state was loaded, false otherwise.
+         */
+        function loadTimerState() {
+            const savedTimerState = localStorage.getItem(LOCAL_STORAGE_TIMER_STATE);
+            if (savedTimerState) {
+                const state = JSON.parse(savedTimerState);
+                elapsedTime = state.elapsedTime || 0;
+                isRunning = state.isRunning || false;
+                
+                // If the timer was running when saved, restart it with the correct elapsed time
+                if (isRunning) {
+                    startTime = Date.now() - elapsedTime;
+                    startTimer();
+                } else {
+                    updateTimerDisplay(); // Just update display to stored elapsed time
+                }
+                return true;
+            }
+            return false;
+        }
+
+        /**
+         * Formats milliseconds into HH:MM:SS string.
+         * @param {number} ms Milliseconds to format.
+         * @returns {string} Formatted time string.
+         */
+        function formatTime(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+
+            const pad = (num) => num.toString().padStart(2, '0');
+            return `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+        }
+
+        /**
+         * Updates the timer display and saves state.
+         */
+        function updateTimerDisplay() {
+            if (isRunning) {
+                elapsedTime = Date.now() - startTime;
+            }
+            timerDisplay.textContent = formatTime(elapsedTime);
+            saveTimerState(); // Save timer state on every update
+        }
+
+        /**
+         * Starts the timer.
+         */
+        function startTimer() {
+            if (!isRunning) {
+                isRunning = true;
+                startTime = Date.now() - elapsedTime; // Adjust start time for resuming
+                timerInterval = setInterval(updateTimerDisplay, 1000);
+                timerStartPauseButton.textContent = 'Pausar';
+                saveTimerState();
+            }
+        }
+
+        /**
+         * Pauses the timer.
+         */
+        function pauseTimer() {
+            if (isRunning) {
+                isRunning = false;
+                clearInterval(timerInterval);
+                timerStartPauseButton.textContent = 'Iniciar';
+                saveTimerState();
+            }
+        }
+
+        /**
+         * Resets the timer.
+         */
+        function resetTimer() {
+            pauseTimer();
+            elapsedTime = 0;
+            updateTimerDisplay();
+            localStorage.removeItem(LOCAL_STORAGE_TIMER_STATE); // Clear timer state from storage
+        }
+
+        /**
+         * Handles start/pause button click.
+         */
+        function handleStartPauseClick() {
+            if (isRunning) {
+                pauseTimer();
+            } else {
+                startTimer();
+            }
+        }
+
+        /**
+         * Loads and displays the current question in the quiz.
+         */
+        function loadQuestion() {
+            // Check if all questions have been displayed in the current sequence
+            if (currentQuestionIndex < currentQuestionsOrder.length) {
+                const question = currentQuestionsOrder[currentQuestionIndex];
+
+                // Update the displayed question number
+                questionNumberSpan.textContent = currentQuestionIndex + 1;
+                questionText.textContent = question.question; // Updates the question text
+
+                optionsContainer.innerHTML = ''; // Clears previous options
+
+                // Iterates over options and creates radio buttons
+                question.options.forEach((option, index) => {
+                    const optionId = `option-${index}`;
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-blue-50 transition duration-200 ease-in-out';
+
+                    const radioInput = document.createElement('input');
+                    radioInput.type = 'radio';
+                    radioInput.name = 'answer';
+                    radioInput.id = optionId;
+                    radioInput.value = index; // Stores the option index
+                    radioInput.className = 'form-radio h-5 w-5 text-blue-600';
+                    radioInput.onchange = () => selectAnswer(index); // Adds onchange event
+
+                    const label = document.createElement('label');
+                    label.htmlFor = optionId;
+                    label.className = 'ml-3 text-lg text-gray-800 flex-grow cursor-pointer';
+                    label.textContent = String.fromCharCode(65 + index) + ') ' + option; // A, B, C, D, E
+
+                    optionDiv.appendChild(radioInput);
+                    optionDiv.appendChild(label);
+                    optionsContainer.appendChild(optionDiv);
+                });
+
+                // Pre-select user's previous answer if available for the current question
+                const prevAnswer = userAnswers[question.originalIndex];
+                if (prevAnswer !== undefined) {
+                    const radioToSelect = document.getElementById(`option-${prevAnswer}`);
+                    if (radioToSelect) {
+                        radioToSelect.checked = true;
+                    }
+                }
+
+
+                // Disable the "Next Question" button until an option is selected (if no previous answer)
+                const isAnswered = (userAnswers[question.originalIndex] !== undefined);
+                nextButton.disabled = !isAnswered;
+                nextButton.classList.toggle('opacity-50', !isAnswered);
+                nextButton.classList.toggle('cursor-not-allowed', !isAnswered);
+
+                // Enable/disable skip button
+                const remainingQuestions = currentQuestionsOrder.length - currentQuestionIndex;
+                skipButton.disabled = (remainingQuestions <= 1);
+                skipButton.classList.toggle('opacity-50', (remainingQuestions <= 1));
+                skipButton.classList.toggle('cursor-not-allowed', (remainingQuestions <= 1));
+
+                saveQuizState(); // Save quiz state after loading question
+            } else {
+                // If all questions have been processed in this sequence, show results
+                showResults();
+            }
+        }
+
+        /**
+         * Enables the "Next Question" button when an option is selected and stores the answer.
+         * @param {number} selectedIndex The index of the option selected by the user.
+         */
+        function selectAnswer(selectedIndex) {
+            // Remove selection from all other radio inputs
+            const radios = optionsContainer.querySelectorAll('input[type="radio"]');
+            radios.forEach(radio => {
+                if (radio.value != selectedIndex) {
+                    radio.checked = false;
+                }
+            });
+
+            // Stores the user's answer for the current question based on its original index
+            userAnswers[currentQuestionsOrder[currentQuestionIndex].originalIndex] = selectedIndex;
+
+            // Enables the "Next Question" button
+            nextButton.disabled = false;
+            nextButton.classList.remove('opacity-50', 'cursor-not-allowed');
+            nextButton.classList.remove('animate-bounce'); // Remove bounce if user finally selects an answer
+            saveQuizState(); // Save quiz state after selecting an answer
+        }
+
+        /**
+         * Advances to the next question or finishes the quiz.
+         */
+        function nextQuestion() {
+            // Checks if the user selected an answer before advancing
+            if (userAnswers[currentQuestionsOrder[currentQuestionIndex].originalIndex] === undefined) {
+                // Add bounce animation to draw attention if no answer selected
+                nextButton.classList.add('animate-bounce');
+                setTimeout(() => {
+                    nextButton.classList.remove('animate-bounce');
+                }, 500);
+                return; // Prevents advancement if no answer was selected
+            }
+
+            currentQuestionIndex++; // Advances to the next question
+            loadQuestion(); // Loads the next question or shows the results
+            // Quiz state is saved inside loadQuestion()
+        }
+
+        /**
+         * Moves the current question to the end of the question array.
+         */
+        function skipQuestion() {
+            const remainingQuestions = currentQuestionsOrder.length - currentQuestionIndex;
+            if (remainingQuestions <= 1) {
+                // Cannot skip if only one question remains
+                return;
+            }
+
+            const skippedQuestion = currentQuestionsOrder[currentQuestionIndex];
+            currentQuestionsOrder.splice(currentQuestionIndex, 1); // Remove from current position
+            currentQuestionsOrder.push(skippedQuestion); // Add to the end of the array
+
+            // No change to currentQuestionIndex, load the new question at this index
+            loadQuestion();
+            // Quiz state is saved inside loadQuestion()
+        }
+
+        /**
+         * Displays the results section after the quiz ends or is finalized manually.
+         */
+        function showResults() {
+            questionSection.classList.add('hidden'); // Hides question section
+            resultsSection.classList.remove('hidden'); // Shows results section
+            pauseTimer(); // Pause the timer when results are shown
+            isQuizFinished = true; // Mark quiz as finished
+            saveQuizState(); // Save the finished state
+
+            // Recalculate correct answers for the final score display, as questions might have been skipped
+            correctAnswersCount = 0;
+            questionsWithOriginalIndex.forEach(question => { // Iterate through the full set of questions
+                const userAnswer = userAnswers[question.originalIndex]; // Get answer based on original index
+                if (userAnswer !== undefined && userAnswer === question.correctAnswerIndex) {
+                    correctAnswersCount++;
+                }
+            });
+
+            // Displays the final score
+            scoreText.innerHTML = `Você acertou <span class="font-bold text-blue-600">${correctAnswersCount}</span> de <span class="font-bold text-blue-600">${questionsWithOriginalIndex.length}</span> questões.`;
+
+            // Clears the answer review container
+            answersReviewContainer.innerHTML = '';
+
+            // Sort questions by their original index for review
+            const sortedQuestionsForReview = [...questionsWithOriginalIndex].sort((a, b) => a.originalIndex - b.originalIndex);
+
+            // Iterates over all questions (in original order) to show the detailed answer key
+            sortedQuestionsForReview.forEach((question, displayIndex) => {
+                const userAnswer = userAnswers[question.originalIndex]; // Get answer based on original index
+                const correctAnswer = question.correctAnswerIndex;
+                const isCorrect = (userAnswer !== undefined && userAnswer === correctAnswer);
+                const wasSkipped = (userAnswer === undefined);
+
+                const reviewItem = document.createElement('div');
+                reviewItem.className = 'p-6 rounded-lg shadow-md';
+                reviewItem.classList.add(isCorrect ? 'bg-green-50' : 'bg-red-50'); // Green background for correct, red for wrong
+
+                let optionsHtml = '';
+                question.options.forEach((option, optionIndex) => {
+                    let optionClass = 'text-gray-800';
+                    let icon = ''; // For correct/wrong icons
+
+                    if (optionIndex === correctAnswer) {
+                        // Correct option (always green)
+                        optionClass = 'font-bold text-green-700';
+                        icon = '✅';
+                    }
+
+                    if (userAnswer === optionIndex && !isCorrect) {
+                        // Option selected by user (if wrong, it will be red)
+                        optionClass = 'font-bold text-red-700';
+                        icon = '❌';
+                    }
+                    
+                    optionsHtml += `<p class="flex items-center text-lg ${optionClass} mb-2">
+                                        <span class="mr-2">${String.fromCharCode(65 + optionIndex)})</span> ${icon} ${option}
+                                    </p>`;
+                });
+
+                let resultMessage = '';
+                if (isCorrect) {
+                    resultMessage = 'Você acertou!';
+                } else if (wasSkipped) {
+                    resultMessage = 'Você pulou esta questão.';
+                } else {
+                    resultMessage = 'Você errou.';
+                }
+
+                const explanationHtml = question.explanation ? `<p class="mt-4 text-md text-gray-700 font-semibold">Explicação: <span class="font-normal">${question.explanation}</span></p>` : '';
+
+
+                reviewItem.innerHTML = `
+                    <p class="text-xl font-semibold text-gray-900 mb-4">Questão ${question.originalIndex + 1}: ${question.question}</p>
+                    ${optionsHtml}
+                    <p class="mt-4 text-md ${isCorrect ? 'text-green-600' : 'text-red-600'}">
+                        ${resultMessage}
+                    </p>
+                    ${explanationHtml}
+                `;
+                answersReviewContainer.appendChild(reviewItem);
+            });
+        }
+
+        /**
+         * Reinicia o quiz para uma nova tentativa.
+         */
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            userAnswers = Array(questionsWithOriginalIndex.length).fill(undefined); // Reset all answers to undefined
+            correctAnswersCount = 0;
+            currentQuestionsOrder = [...questionsWithOriginalIndex]; // Reset question order
+            isQuizFinished = false; // Reset finished status
+
+            resultsSection.classList.add('hidden'); // Hides results section
+            questionSection.classList.remove('hidden'); // Shows question section
+            
+            resetTimer(); // Reset the timer as well
+            localStorage.removeItem(LOCAL_STORAGE_QUIZ_STATE); // Clear quiz state from storage
+            localStorage.removeItem(LOCAL_STORAGE_TIMER_STATE); // Clear timer state from storage
+            loadQuestion(); // Loads the first question
+            startTimer(); // Start timer automatically on restart
+        }
+
+        // Add event listeners to buttons
+        nextButton.addEventListener('click', nextQuestion);
+        skipButton.addEventListener('click', skipQuestion);
+        finishButton.addEventListener('click', showResults);
+        restartButton.addEventListener('click', restartQuiz);
+
+        // Timer Event Listeners
+        timerStartPauseButton.addEventListener('click', handleStartPauseClick);
+        timerResetButton.addEventListener('click', resetTimer);
+
+        // Loads the first question and timer state when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            if (loadQuizState()) { // Try to load quiz state
+                if (isQuizFinished) {
+                    showResults(); // If quiz was finished, show results directly
+                } else {
+                    loadQuestion(); // Otherwise, load the current question to continue
+                }
+            } else {
+                // If no saved quiz state, initialize currentQuestionsOrder and userAnswers
+                currentQuestionsOrder = [...questionsWithOriginalIndex];
+                userAnswers = Array(questionsWithOriginalIndex.length).fill(undefined);
+                currentQuestionIndex = 0;
+                loadQuestion(); // Load the first question
+            }
+            
+            loadTimerState(); // Always try to load timer state
+        });
+    </script>
+</body>
+</html>
