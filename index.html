@@ -63,7 +63,7 @@
         <!-- Seção da Questão -->
         <div id="question-section">
             <div class="mb-4 sm:mb-6">
-                <p class="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-4">Questão <span id="current-question-number">1</span> de 80 - <span id="question-subject"></span> (<span id="question-topic"></span>)</p>
+                <p class="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-4">Questão <span id="current-question-number">1</span> de 90 - <span id="question-subject"></span> (<span id="question-topic"></span>)</p>
                 <p id="question-text" class="text-lg sm:text-xl text-gray-900 mb-4 sm:mb-6"></p>
             </div>
 
@@ -887,7 +887,8 @@
         let currentQuestionsOrder = [...questionsWithOriginalIndex];
         let isQuizFinished = false; // New state variable for quiz finished status
         let quizStartTime = 0; // New: stores timestamp when quiz actually started (after clicking "Começar Prova")
-
+		let isRadioSelected = false;
+		
         // Mapping of DOM elements
         const startScreen = document.getElementById('start-screen'); // New
         const startQuizButton = document.getElementById('start-quiz-button'); // New
@@ -921,6 +922,7 @@
         const totalQuizTime = 3 * 60 * 60 * 1000; // 3 hours in milliseconds
         let remainingTime = totalQuizTime; // Initial remaining time
         let isRunning = false;
+		
 
         // Local Storage Keys
         const LOCAL_STORAGE_QUIZ_STATE = 'quizState';
@@ -936,7 +938,8 @@
                 userAnswers: userAnswers,
                 currentQuestionsOrderOriginalIndices: currentQuestionsOrder.map(q => q.originalIndex),
                 isQuizFinished: isQuizFinished, // Save the finished status
-                quizStartTime: quizStartTime // Save quiz start timestamp
+                quizStartTime: quizStartTime, // Save quiz start timestamp
+				isRadioSelected: isRadioSelected
             };
             localStorage.setItem(LOCAL_STORAGE_QUIZ_STATE, JSON.stringify(state));
         }
@@ -953,6 +956,7 @@
                 userAnswers = state.userAnswers;
                 isQuizFinished = state.isQuizFinished || false; // Load finished status
                 quizStartTime = state.quizStartTime || 0; // Load quiz start timestamp
+				isRadioSelected = state.isRadioSelected || false;
 
                 // Reconstruct the 'currentQuestionsOrder' array based on the saved order of original indices
                 if (state.currentQuestionsOrderOriginalIndices && state.currentQuestionsOrderOriginalIndices.length > 0) {
@@ -1004,12 +1008,19 @@
                 resumeQuizButtonContainer.style.display = 'none';
                 questionSection.classList.remove('blur-content'); // Ensure unblurred for results review
                 questionSection.classList.add('unblur-content');
-            } else if (isRunning) {
+            } else if (startScreen.style.display === 'block') {
+                // If we are on the start screen, hide timer and resume button
+                timerContainer.style.display = 'none';
+                resumeQuizButtonContainer.style.display = 'none';
+            }
+            else if (isRunning) {
                 // If quiz is in progress and timer was running, start it
                 startTimer(); // This will handle showing timerContainer, hiding resume button, unblurring
+                timerContainer.style.display = 'flex'; // Explicitly show timer when quiz is running
             } else {
                 // If quiz is in progress and timer was paused, show timer and resume button, blur content
                 pauseTimer(); // This will handle showing timerContainer, showing resume button, blurring
+                timerContainer.style.display = 'flex'; // Explicitly show timer when quiz is paused
             }
             return true; // Indicate that we've processed timer state
         }
@@ -1055,6 +1066,13 @@
          */
         function startTimer() {
             if (!isRunning && !isQuizFinished) {
+				
+				if(isRadioSelected){
+					nextButton.disabled = false;
+					nextButton.classList.toggle('opacity-50', false);
+					nextButton.classList.toggle('cursor-not-allowed', false);
+				}
+
                 isRunning = true;
                 startTime = Date.now(); // Set the new start time
                 timerInterval = setInterval(updateTimerDisplay, 1000); // Update every second
@@ -1080,6 +1098,10 @@
                 resumeQuizButtonContainer.style.display = 'block'; // Show resume button
                 saveTimerState();
             }
+			nextButton.disabled = true;
+            nextButton.classList.toggle('opacity-50', true);
+            nextButton.classList.toggle('cursor-not-allowed', true);
+			
         }
 
         /**
@@ -1149,6 +1171,7 @@
                 nextButton.disabled = !isAnswered;
                 nextButton.classList.toggle('opacity-50', !isAnswered);
                 nextButton.classList.toggle('cursor-not-allowed', !isAnswered);
+				
 
                 // Enable/disable skip button
                 const remainingQuestions = currentQuestionsOrder.length - currentQuestionIndex;
@@ -1183,6 +1206,9 @@
             nextButton.disabled = false;
             nextButton.classList.remove('opacity-50', 'cursor-not-allowed');
             nextButton.classList.remove('animate-bounce'); // Remove bounce if user finally selects an answer
+			
+			isRadioSelected = true;
+			
             saveQuizState(); // Save quiz state after selecting an answer
         }
 
@@ -1199,10 +1225,14 @@
                 }, 500);
                 return; // Prevents advancement if no answer was selected
             }
-
+			
+			isRadioSelected = false;
             currentQuestionIndex++; // Advances to the next question
             loadQuestion(); // Loads the next question or shows the results
             // Quiz state is saved inside loadQuestion()
+			nextButton.disabled = true;
+			nextButton.classList.toggle('opacity-50', true);
+			nextButton.classList.toggle('cursor-not-allowed', true);
         }
 
         /**
@@ -1231,6 +1261,7 @@
             questionSection.style.display = 'none'; // Hides question section
             resultsSection.style.display = 'block'; // Ensure results section is shown as block
             startScreen.style.display = 'none'; // Ensure start screen is hidden
+            
             timerContainer.style.display = 'none'; // Hide timer display on results screen
 
             pauseTimer(); // Pause the timer when results are shown
@@ -1398,8 +1429,12 @@
                 questionSection.style.display = 'none';
                 resultsSection.style.display = 'none';
             }
+			
             
             loadTimerState(); // Always try to load timer state (will handle visibility based on isQuizFinished)
+			
+			pauseTimer();
+			//timerContainer.style.display = 'flex';
         });
     </script>
 </body>
