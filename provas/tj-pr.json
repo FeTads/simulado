@@ -1,0 +1,1240 @@
+[
+    {
+        "question": "Qual figura de linguagem consiste na repetição de uma palavra ou expressão no início de versos ou frases sucessivas?",
+        "options": ["Metáfora", "Ironia", "Anáfora", "Hipérbole", "Paradoxo"],
+        "correctAnswerIndex": 2,
+        "explanation": "A anáfora é a repetição intencional de palavras ou frases no início de versos, estrofes ou períodos consecutivos, criando um efeito de ênfase ou ritmo.",
+        "subject": "Língua Portuguesa",
+        "topic": "Figuras de Linguagem"
+    },
+    {
+        "question": "Em qual alternativa o termo em destaque é um advérbio de tempo?",
+        "options": ["Ele está 'muito' feliz.", "Saímos 'cedo' para a reunião.", "A casa 'grande' é dele.", "Ela falou 'claramente'.", "Comemos 'bastante'."],
+        "correctAnswerIndex": 1,
+        "explanation": "'Cedo' indica tempo. Advérbios de tempo expressam a circunstância de tempo em que a ação ocorre.",
+        "subject": "Língua Portuguesa",
+        "topic": "Advérbios"
+    },
+    {
+        "question": "Assinale a alternativa em que a concordância verbal está incorreta.",
+        "options": ["Havia muitas pessoas na fila.", "Fazem dois anos que não o vejo.", "Devem haver soluções para o problema.", "Trata-se de casos delicados.", "A maioria dos alunos fez a prova."],
+        "correctAnswerIndex": 2,
+        "explanation": "O verbo 'haver' no sentido de 'existir' ou 'acontecer' é impessoal (não tem sujeito) e deve permanecer no singular. O correto seria 'Deve haver soluções' ou 'Devem existir soluções'.",
+        "subject": "Língua Portuguesa",
+        "topic": "Concordância Verbal"
+    },
+    {
+        "question": "Qual o significado da expressão 'ipsis litteris'?",
+        "options": ["Ao pé da letra", "Em partes", "De forma rápida", "Em tese", "Com certeza"],
+        "correctAnswerIndex": 0,
+        "explanation": "'Ipsis litteris' é uma locução latina que significa 'ao pé da letra', 'textualmente', 'palavra por palavra'.",
+        "subject": "Língua Portuguesa",
+        "topic": "Expressões Latinas"
+    },
+    {
+        "question": "A frase 'Ele é um anjo!' é um exemplo de qual figura de linguagem?",
+        "options": ["Comparação", "Metáfora", "Eufemismo", "Personificação", "Antítese"],
+        "correctAnswerIndex": 1,
+        "explanation": "A metáfora é uma comparação implícita, sem o uso de conectivos comparativos (como 'como', 'tal qual'). Há uma transferência de significado, atribuindo características de um anjo a 'ele'.",
+        "subject": "Língua Portuguesa",
+        "topic": "Figuras de Linguagem"
+    },
+    {
+        "question": "Identifique a oração subordinada substantiva subjetiva:",
+        "options": ["É necessário que todos colaborem.", "Desejo que você vença.", "Sabemos que ele é honesto.", "Parece que vai chover.", "Tenho certeza de que ele virá."],
+        "correctAnswerIndex": 0,
+        "explanation": "A oração 'que todos colaborem' funciona como sujeito do verbo 'é necessário'. É uma oração subordinada substantiva subjetiva.",
+        "subject": "Língua Portuguesa",
+        "topic": "Período Composto"
+    },
+    {
+        "question": "Qual das palavras abaixo NÃO é um substantivo coletivo?",
+        "options": ["Cardume", "Alcateia", "Atlas", "Flora", "Réstia"],
+        "correctAnswerIndex": 2,
+        "explanation": "Cardume (peixes), Alcateia (lobos), Flora (plantas) e Réstia (alho, cebola) são coletivos. Atlas é um livro de mapas, não um coletivo.",
+        "subject": "Língua Portuguesa",
+        "topic": "Substantivos"
+    },
+    {
+        "question": "Assinale a alternativa com erro de regência nominal:",
+        "options": ["Tenho aversão 'a' doces.", "Estou apto 'para' o trabalho.", "Ele tem capacidade 'de' liderança.", "Minha obediência 'ao' regulamento.", "Ele é acostumado 'com' barulho."],
+        "correctAnswerIndex": 4,
+        "explanation": "A regência nominal de 'acostumado' pode gerar dúvidas. Embora 'acostumado com' seja comum na linguagem informal para indicar familiaridade, a norma culta, especialmente em concursos, prefere a preposição 'a' quando se refere a um hábito ou costume. Assim, a forma mais adequada seria 'acostumado A barulho'. A alternativa apresentada com 'com' é considerada um desvio da regência padrão em contextos formais.",
+        "subject": "Língua Portuguesa",
+        "topic": "Regência Nominal"
+    },
+    {
+        "question": "Qual o processo de formação de palavras presente em 'planalto'?",
+        "options": ["Derivação prefixal", "Derivação sufixal", "Composição por aglutinação", "Composição por justaposição", "Parassíntese"],
+        "correctAnswerIndex": 2,
+        "explanation": "Planalto é formada pela junção de 'plano' + 'alto'. Houve perda de fonemas ('o' de plano), caracterizando composição por aglutinação.",
+        "subject": "Língua Portuguesa",
+        "topic": "Formação de Palavras"
+    },
+    {
+        "question": "A crase está empregada corretamente em qual alternativa?",
+        "options": [
+            "Ele se dirigiu a escola.",
+            "Ele foi a pé à reunião.",
+            "Ele assistiu a peça.",
+            "Fomos à padaria às dez horas.",
+            "Devido à problemas técnicos."
+        ],
+        "correctAnswerIndex": 3,
+        "explanation": "A alternativa correta é 'Fomos à padaria às dez horas', pois o verbo 'ir' (fomos) rege a preposição 'a', que se une ao artigo 'a' de 'padaria' (à padaria) e ao artigo 'as' de 'dez horas' (às dez horas). Analisando as demais: A) 'Ele se dirigiu a escola' está incorreto; o verbo 'dirigir-se' rege preposição 'a', e 'escola' é feminino, portanto 'à escola'. B) 'Ele foi a pé à reunião' está incorreto; a locução adverbial 'a pé' (com substantivo masculino) não leva crase. C) 'Ele assistiu a peça' está incorreto; o verbo 'assistir' no sentido de 'ver' rege preposição 'a', e 'peça' é feminino, portanto 'à peça'. E) 'Devido à problemas técnicos' está incorreto; a crase não ocorre antes de substantivos masculinos ('problemas').",
+        "subject": "Língua Portuguesa",
+        "topic": "Crase"
+    },
+    {
+        "question": "Qual dos períodos abaixo apresenta um verbo no modo imperativo?",
+        "options": ["Ele estudou muito para a prova.", "Se você vier, avisarei.", "Faça o seu dever agora!", "Eles iriam viajar amanhã.", "Que todos sejam felizes."],
+        "correctAnswerIndex": 2,
+        "explanation": "'Faça' é uma forma verbal que expressa ordem, pedido ou conselho, característica do modo imperativo.",
+        "subject": "Língua Portuguesa",
+        "topic": "Verbos e Modos Verbais"
+    },
+    {
+        "question": "Qual das opções apresenta um exemplo de eufemismo?",
+        "options": ["'Choveu canivetes' durante a tempestade.", "Ele 'bateu as botas' ontem à noite.", "O prédio era tão alto que 'tocava as nuvens'.", "Sua 'voz de trovão' assustou a todos.", "Estou 'morrendo de fome'."],
+        "correctAnswerIndex": 1,
+        "explanation": "Eufemismo é a figura de linguagem que suaviza uma ideia desagradável ou chocante. 'Bateu as botas' é uma forma mais leve de dizer 'morreu'.",
+        "subject": "Língua Portuguesa",
+        "topic": "Figuras de Linguagem"
+    },
+    {
+        "question": "Assinale a alternativa que indica corretamente o sujeito da oração: 'Faltam dez minutos para o início do evento.'",
+        "options": ["Oculto", "Indeterminado", "Dez minutos", "O evento", "Inexistente"],
+        "correctAnswerIndex": 2,
+        "explanation": "O sujeito é 'dez minutos', pois é a informação que 'falta'. Verbos que indicam tempo transcorrido ou fenômenos da natureza são impessoais, mas 'faltar' pode ter sujeito se indicar o que está faltando.",
+        "subject": "Língua Portuguesa",
+        "topic": "Termos da Oração"
+    },
+    {
+        "question": "Em 'Ela sempre agia com muita discrição', o termo em destaque é um advérbio de:",
+        "options": ["Modo", "Tempo", "Intensidade", "Lugar", "Afirmação"],
+        "correctAnswerIndex": 0,
+        "explanation": "'Com muita discrição' (locução adverbial) e 'discretamente' (advérbio correspondente) indicam o modo como ela agia, ou seja, a maneira.",
+        "subject": "Língua Portuguesa",
+        "topic": "Advérbios"
+    },
+    {
+        "question": "Qual alternativa apresenta corretamente a classificação do pronome em destaque: 'Aquele' carro é meu.",
+        "options": ["Pessoal do caso reto", "Possessivo", "Demonstrativo", "Indefinido", "Relativo"],
+        "correctAnswerIndex": 2,
+        "explanation": "'Aquele' é um pronome demonstrativo, usado para indicar a posição de algo em relação às pessoas do discurso.",
+        "subject": "Língua Portuguesa",
+        "topic": "Pronomes"
+    },
+    {
+        "question": "Assinale a opção em que a pontuação está empregada corretamente.",
+        "options": ["Comprei pães, queijo e, leite.", "Chegou, o professor.", "O livro que li, é excelente.", "Ele, muito calmo, explicou a situação.", "Disse que, viria hoje."],
+        "correctAnswerIndex": 3,
+        "explanation": "Na alternativa 'Ele, muito calmo, explicou a situação.', as vírgulas isolam uma expressão adverbial deslocada ('muito calmo') ou um adjunto adnominal intercalado que se refere ao sujeito, estando corretamente empregadas. As demais opções apresentam erros de pontuação.",
+        "subject": "Língua Portuguesa",
+        "topic": "Pontuação"
+    },
+    {
+        "question": "Em 'Embora estivesse cansado, continuou a trabalhar.', a oração subordinada é classificada como:",
+        "options": ["Subordinada Adverbial Consecutiva", "Subordinada Adverbial Causal", "Subordinada Adverbial Concessiva", "Subordinada Adverbial Temporal", "Subordinada Substantiva Objetiva Direta"],
+        "correctAnswerIndex": 2,
+        "explanation": "A oração 'Embora estivesse cansado' introduz uma ideia de concessão (algo que contradiz a ação principal), sendo uma oração subordinada adverbial concessiva.",
+        "subject": "Língua Portuguesa",
+        "topic": "Período Composto"
+    },
+    {
+        "question": "Qual das alternativas contém um erro de ortografia?",
+        "options": ["Exceção", "Excessão", "Ascensão", "Exceder", "Exsudar"],
+        "correctAnswerIndex": 1,
+        "explanation": "A grafia correta da palavra é 'exceção', com 'c'. 'Excessão' está incorreta.",
+        "subject": "Língua Portuguesa",
+        "topic": "Ortografia"
+    },
+    {
+        "question": "A voz verbal em 'A prova foi corrigida pelo professor.' é:",
+        "options": ["Ativa", "Passiva Analítica", "Passiva Sintética", "Reflexiva", "Recíproca"],
+        "correctAnswerIndex": 1,
+        "explanation": "A voz passiva analítica é formada por um verbo auxiliar (ser/estar) + particípio do verbo principal + agente da passiva (opcional). 'Foi corrigida' e 'pelo professor' indicam claramente essa estrutura.",
+        "subject": "Língua Portuguesa",
+        "topic": "Vozes Verbais"
+    },
+    {
+        "question": "O termo 'sem-terra' é formado pelo processo de:",
+        "options": ["Derivação prefixal", "Derivação sufixal", "Composição por justaposição", "Composição por aglutinação", "Parassíntese"],
+        "correctAnswerIndex": 2,
+        "explanation": "'Sem-terra' é um exemplo de composição por justaposição, onde os elementos se unem sem perda de fonemas, mantendo sua autonomia ortográfica.",
+        "subject": "Língua Portuguesa",
+        "topic": "Formação de Palavras"
+    },
+    {
+        "question": "Se 'todos os gatos são felinos' e 'alguns felinos são pretos', o que se pode concluir?",
+        "options": ["Todos os gatos são pretos.", "Nenhum gato é preto.", "Alguns gatos são pretos.", "Alguns felinos não são gatos.", "Não se pode concluir nada sobre gatos pretos."],
+        "correctAnswerIndex": 4,
+        "explanation": "A afirmação 'todos os gatos são felinos' não implica que 'todos' os felinos sejam gatos. A segunda afirmação 'alguns felinos são pretos' não especifica se esses felinos são gatos ou não. Portanto, não é possível concluir nada sobre a cor dos gatos com base nas premissas dadas.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Silogismos e Lógica Dedutiva"
+    },
+    {
+        "question": "Se 3 torneiras enchem um tanque em 4 horas, quantas horas 6 torneiras idênticas levariam para encher o mesmo tanque?",
+        "options": ["1 hora", "2 horas", "3 horas", "4 horas", "6 horas"],
+        "correctAnswerIndex": 1,
+        "explanation": "É uma relação inversa: mais torneiras significam menos tempo. (3 torneiras * 4 horas) = X torneiras * Y horas. 3 * 4 = 6 * Y => 12 = 6Y => Y = 2 horas.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Regra de Três Inversa"
+    },
+    {
+        "question": "Qual o próximo número na sequência: 2, 4, 8, 16, ...?",
+        "options": ["20", "24", "30", "32", "36"],
+        "correctAnswerIndex": 3,
+        "explanation": "A sequência é uma progressão geométrica onde cada termo é o dobro do anterior (2 x 2 = 4, 4 x 2 = 8, 8 x 2 = 16). Então, o próximo é 16 x 2 = 32.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Sequências Numéricas"
+    },
+    {
+        "question": "Se a negação de 'estudei e passei' é 'não estudei ou não passei', qual a negação de 'vou viajar ou vou trabalhar'?",
+        "options": ["Não vou viajar ou vou trabalhar.", "Vou viajar e não vou trabalhar.", "Não vou viajar e não vou trabalhar.", "Não vou viajar ou não vou trabalhar.", "Se não vou viajar, então vou trabalhar."],
+        "correctAnswerIndex": 2,
+        "explanation": "Utiliza-se a Lei de De Morgan: a negação de (P ou Q) é (não P E não Q). Portanto, a negação de 'vou viajar ou vou trabalhar' é 'não vou viajar E não vou trabalhar'.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Negação de Proposições"
+    },
+    {
+        "question": "Um terreno retangular tem 15m de comprimento e 8m de largura. Qual a sua área?",
+        "options": ["23 m²", "46 m²", "60 m²", "100 m²", "120 m²"],
+        "correctAnswerIndex": 4,
+        "explanation": "A área de um retângulo é calculada multiplicando-se o comprimento pela largura. Área = 15m * 8m = 120 m².",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Geometria - Área"
+    },
+    {
+        "question": "Se 'P → Q' é verdadeiro e 'Q' é falso, o que se pode afirmar sobre 'P'?",
+        "options": ["P é verdadeiro", "P é falso", "P pode ser verdadeiro ou falso", "Q é verdadeiro", "Não há relação com P"],
+        "correctAnswerIndex": 1,
+        "explanation": "Na lógica, uma implicação (P → Q) só é falsa se P for verdadeiro e Q for falso. Como a implicação é verdadeira e Q é falso, P obrigatoriamente deve ser falso para a implicação se manter verdadeira.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Tabela Verdade"
+    },
+    {
+        "question": "Uma prova tem 40 questões. Se um aluno acertou 75% das questões, quantas questões ele errou?",
+        "options": ["5", "10", "15", "20", "30"],
+        "correctAnswerIndex": 1,
+        "explanation": "Se ele acertou 75%, ele errou 100% - 75% = 25% das questões. 25% de 40 questões é (0.25 * 40) = 10 questões.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Porcentagem"
+    },
+    {
+        "question": "Dada a proposição 'Se chove, então faz frio'. Qual das alternativas é equivalente logicamente?",
+        "options": ["Se não chove, então não faz frio.", "Se não faz frio, então não chove.", "Chove e faz frio.", "Não chove e não faz frio.", "Faz frio e não chove."],
+        "correctAnswerIndex": 1,
+        "explanation": "A equivalência lógica de 'Se P, então Q' é 'Se não Q, então não P' (contrapositiva). Portanto, 'Se não faz frio, então não chove'.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Equivalência Lógica"
+    },
+    {
+        "question": "Qual a média aritmética dos números 10, 15, 20, 25?",
+        "options": ["15", "17.5", "20", "22.5", "25"],
+        "correctAnswerIndex": 1,
+        "explanation": "A média aritmética é a soma dos números dividida pela quantidade de números. (10 + 15 + 20 + 25) / 4 = 70 / 4 = 17.5.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Média Aritmética"
+    },
+    {
+        "question": "Se A é maior que B, e B é maior que C, então:",
+        "options": ["C é maior que A", "A é igual a C", "C é menor que A", "B é menor que C", "A é menor que B"],
+        "correctAnswerIndex": 2,
+        "explanation": "Se A > B e B > C, por transitividade, A é maior que C. Consequentemente, C é menor que A.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Relações Lógicas"
+    },
+    {
+        "question": "Em um grupo de 50 pessoas, 30 falam inglês e 20 falam espanhol. Se 10 pessoas falam ambos os idiomas, quantas pessoas não falam nenhum dos dois?",
+        "options": ["0", "5", "10", "15", "20"],
+        "correctAnswerIndex": 2,
+        "explanation": "Número de pessoas que falam inglês ou espanhol = (pessoas que falam inglês) + (pessoas que falam espanhol) - (pessoas que falam ambos) = 30 + 20 - 10 = 40. Se o total é 50, então 50 - 40 = 10 pessoas não falam nenhum dos dois.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Conjuntos e Diagramas de Venn"
+    },
+    {
+        "question": "Qual o valor de 'x' na equação 2x + 5 = 15?",
+        "options": ["3", "5", "7", "8", "10"],
+        "correctAnswerIndex": 4,
+        "explanation": "Para resolver a equação, subtraia 5 de ambos os lados: 2x = 10. Em seguida, divida por 2: x = 5. O correto seria 2x = 15 - 5 = 10, então x = 10/2 = 5. O valor correto é 5, a opção é 4",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Equações Algébricas"
+    },
+    {
+        "question": "Se um capital de R$ 1.000,00 é aplicado a juros simples de 10% ao ano por 2 anos, qual o montante final?",
+        "options": ["R$ 1.100,00", "R$ 1.200,00", "R$ 1.210,00", "R$ 1.300,00", "R$ 1.400,00"],
+        "correctAnswerIndex": 1,
+        "explanation": "Juros simples = Capital x Taxa x Tempo. J = 1000 * 0.10 * 2 = 200. Montante = Capital + Juros = 1000 + 200 = R$ 1.200,00.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Juros Simples"
+    },
+    {
+        "question": "Se todos os cachorros são mamíferos e todos os mamíferos têm coração, o que se pode concluir?",
+        "options": ["Todos os corações são mamíferos.", "Alguns mamíferos não são cachorros.", "Todos os cachorros têm coração.", "Nenhum mamífero tem coração.", "Não se pode concluir nada."],
+        "correctAnswerIndex": 2,
+        "explanation": "Por transitividade, se todos os cachorros são mamíferos e todos os mamíferos têm coração, então todos os cachorros têm coração.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Silogismos"
+    },
+    {
+        "question": "Qual o resultado da expressão: 5 + 3 × (8 - 2)?",
+        "options": ["14", "23", "30", "38", "48"],
+        "correctAnswerIndex": 2,
+        "explanation": "Primeiro resolvemos o parênteses: (8 - 2) = 6. Depois a multiplicação: 3 × 6 = 18. Por fim, a adição: 5 + 18 = 23. A opção é 2.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Expressões Numéricas"
+    },
+    {
+        "question": "Se hoje é quarta-feira, que dia da semana será daqui a 100 dias?",
+        "options": ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira"],
+        "correctAnswerIndex": 4,
+        "explanation": "O ciclo da semana se repete a cada 7 dias. Divida 100 por 7: 100 ÷ 7 = 14 com resto 2. Isso significa que após 14 semanas completas, teremos quarta-feira novamente, e então, contamos mais 2 dias: quinta-feira, sexta-feira.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Raciocínio Temporal"
+    },
+    {
+        "question": "Um artigo que custava R$ 200,00 teve um aumento de 15%. Qual o novo preço do artigo?",
+        "options": ["R$ 215,00", "R$ 220,00", "R$ 225,00", "R$ 230,00", "R$ 250,00"],
+        "correctAnswerIndex": 2,
+        "explanation": "Aumento de 15% de R$ 200,00 = 0,15 * 200 = R$ 30,00. Novo preço = 200 + 30 = R$ 230,00.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Porcentagem"
+    },
+    {
+        "question": "Qual a negação da proposição 'João é alto e Maria é baixa'?",
+        "options": ["João não é alto e Maria não é baixa.", "João não é alto ou Maria não é baixa.", "Se João não é alto, então Maria é baixa.", "João é baixo ou Maria é alta.", "João é alto ou Maria não é baixa."],
+        "correctAnswerIndex": 1,
+        "explanation": "A negação de uma conjunção (P e Q) é a disjunção da negação de cada proposição (não P ou não Q).",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Negação de Proposições"
+    },
+    {
+        "question": "Quantos números primos existem entre 10 e 20?",
+        "options": ["2", "3", "4", "5", "6"],
+        "correctAnswerIndex": 2,
+        "explanation": "Os números primos entre 10 e 20 são: 11, 13, 17, 19. Existem 4 números primos.",
+        "subject": "Matemática/Raciocínio Lógico",
+        "topic": "Números Primos"
+    },
+    {
+        "question": "Qual das opções abaixo é um software de planilha eletrônica?",
+        "options": ["Microsoft Word", "Google Chrome", "Microsoft Excel", "Adobe Photoshop", "Mozilla Firefox"],
+        "correctAnswerIndex": 2,
+        "explanation": "Microsoft Excel é um software amplamente conhecido para criação e edição de planilhas eletrônicas.",
+        "subject": "Noções de Informática",
+        "topic": "Softwares de Escritório"
+    },
+    {
+        "question": "A sigla 'CPU' em informática significa:",
+        "options": ["Central Processing Unit", "Central Power Unit", "Computer Personal User", "Control Panel Unit", "Core Processing Utility"],
+        "correctAnswerIndex": 0,
+        "explanation": "CPU significa Central Processing Unit (Unidade Central de Processamento), que é o 'cérebro' do computador.",
+        "subject": "Noções de Informática",
+        "topic": "Componentes de Hardware"
+    },
+    {
+        "question": "Qual é a principal função de um firewall em segurança da informação?",
+        "options": ["Acelerar a internet", "Proteger contra vírus de macro", "Monitorar e controlar o tráfego de rede", "Otimizar o desempenho do sistema", "Gerenciar senhas de usuário"],
+        "correctAnswerIndex": 2,
+        "explanation": "Um firewall atua como uma barreira entre sua rede interna e redes externas (como a internet), monitorando e controlando o tráfego para evitar acessos não autorizados.",
+        "subject": "Noções de Informática",
+        "topic": "Segurança da Informação"
+    },
+    {
+        "question": "Em um e-mail, qual campo é usado para enviar uma cópia da mensagem a outros destinatários, sem que os endereços desses destinatários sejam visíveis para os demais?",
+        "options": ["Para (To)", "Cc (Com Cópia)", "Cco (Com Cópia Oculta)", "Assunto (Subject)", "Anexo (Attachment)"],
+        "correctAnswerIndex": 2,
+        "explanation": "O campo Cco (Com Cópia Oculta) ou BCC (Blind Carbon Copy) permite enviar cópias para destinatários cujos endereços não serão visíveis para os outros recebedores.",
+        "subject": "Noções de Informática",
+        "topic": "Correio Eletrônico"
+    },
+    {
+        "question": "Qual o atalho de teclado universal para 'copiar' um item?",
+        "options": ["Ctrl + X", "Ctrl + V", "Ctrl + Z", "Ctrl + C", "Ctrl + P"],
+        "correctAnswerIndex": 3,
+        "explanation": "Ctrl + C é o atalho de teclado padrão para copiar o item selecionado.",
+        "subject": "Noções de Informática",
+        "topic": "Atalhos de Teclado"
+    },
+    {
+        "question": "Qual tipo de malware se disfarça como um programa legítimo para enganar o usuário?",
+        "options": ["Vírus", "Worm", "Spyware", "Cavalo de Troia", "Adware"],
+        "correctAnswerIndex": 3,
+        "explanation": "Um Cavalo de Troia (Trojan Horse) é um tipo de malware que se apresenta como um software útil e legítimo para enganar o usuário e ser instalado.",
+        "subject": "Noções de Informática",
+        "topic": "Malware"
+    },
+    {
+        "question": "No contexto de redes de computadores, o que significa a sigla 'HTTP'?",
+        "options": ["HyperText Transfer Protocol", "High Technology Transfer Process", "Hyperlink Text Transmission Protocol", "Home Transferring Technical Program", "Host to Host Transfer Protocol"],
+        "correctAnswerIndex": 0,
+        "explanation": "HTTP significa HyperText Transfer Protocol, um protocolo fundamental para a comunicação na World Wide Web.",
+        "subject": "Noções de Informática",
+        "topic": "Redes de Computadores"
+    },
+    {
+        "question": "Qual das opções é um navegador de internet?",
+        "options": ["Microsoft Word", "Adobe Acrobat", "Mozilla Firefox", "VLC Media Player", "WinRAR"],
+        "correctAnswerIndex": 2,
+        "explanation": "Mozilla Firefox é um popular navegador de internet, utilizado para acessar páginas web.",
+        "subject": "Noções de Informática",
+        "topic": "Navegadores"
+    },
+    {
+        "question": "Qual dispositivo é considerado de saída em um computador?",
+        "options": ["Teclado", "Mouse", "Microfone", "Impressora", "Scanner"],
+        "correctAnswerIndex": 3,
+        "explanation": "A impressora é um dispositivo de saída, pois ela recebe dados do computador e os imprime em papel.",
+        "subject": "Noções de Informática",
+        "topic": "Dispositivos de Entrada e Saída"
+    },
+    {
+        "question": "O que é 'phishing' em segurança da informação?",
+        "options": ["Um tipo de antivírus", "Um software de compactação", "Uma técnica de fraude para obter dados pessoais", "Um sistema de criptografia", "Um método de backup de dados"],
+        "correctAnswerIndex": 2,
+        "explanation": "Phishing é uma técnica de engenharia social onde criminosos tentam obter informações confidenciais (senhas, dados bancários) disfarçando-se como entidades confiáveis em comunicações eletrônicas.",
+        "subject": "Noções de Informática",
+        "topic": "Segurança da Informação"
+    },
+    {
+        "question": "No Microsoft Word, qual a finalidade da ferramenta 'Quebra de Página'?",
+        "options": ["Inserir uma nova linha.", "Alterar a orientação da página.", "Forçar o texto seguinte a iniciar em uma nova página.", "Dividir o documento em duas colunas.", "Duplicar a página atual."],
+        "correctAnswerIndex": 2,
+        "explanation": "A quebra de página permite iniciar uma nova página no documento a partir do ponto onde o cursor está posicionado, independentemente do espaço restante na página atual.",
+        "subject": "Noções de Informática",
+        "topic": "Microsoft Word"
+    },
+    {
+        "question": "Qual a função do 'Ctrl + Z' em muitos programas?",
+        "options": ["Copiar o item selecionado", "Colar o item copiado", "Desfazer a última ação", "Salvar o documento", "Imprimir o documento"],
+        "correctAnswerIndex": 2,
+        "explanation": "Ctrl + Z é o atalho universal para desfazer a última ação realizada em um programa.",
+        "subject": "Noções de Informática",
+        "topic": "Atalhos de Teclado"
+    },
+    {
+        "question": "Qual o significado de 'URL' em um navegador de internet?",
+        "options": ["User Remote Location", "Universal Resource Locator", "Unified Retrieval Link", "Upload Request Limit", "Utility Resource Log"],
+        "correctAnswerIndex": 1,
+        "explanation": "URL significa Uniform Resource Locator (Localizador Uniforme de Recursos), que é o endereço de um recurso na internet.",
+        "subject": "Noções de Informática",
+        "topic": "Redes de Computadores"
+    },
+    {
+        "question": "Qual o termo técnico para o ato de converter um arquivo de um formato para outro?",
+        "options": ["Compactar", "Criptografar", "Renderizar", "Converter", "Descompactar"],
+        "correctAnswerIndex": 3,
+        "explanation": "O termo 'converter' é usado para descrever a mudança de um arquivo de um formato para outro, como de .doc para .pdf.",
+        "subject": "Noções de Informática",
+        "topic": "Formatos de Arquivo"
+    },
+    {
+        "question": "O que é 'backup' em informática?",
+        "options": ["Uma cópia de segurança de dados.", "Um programa antivírus.", "Um tipo de impressora.", "Uma conexão de rede sem fio.", "Um dispositivo de entrada de dados."],
+        "correctAnswerIndex": 0,
+        "explanation": "Backup é o processo de fazer cópias de segurança de dados importantes para protegê-los contra perda ou corrupção.",
+        "subject": "Noções de Informática",
+        "topic": "Backup de Dados"
+    },
+    {
+        "question": "No Microsoft Excel, qual a função usada para somar um intervalo de células?",
+        "options": ["=SOMA()", "=MÉDIA()", "=SE()", "=CONT.NÚM()", "=PROCV()"],
+        "correctAnswerIndex": 0,
+        "explanation": "A função =SOMA() é utilizada para calcular a soma dos valores contidos em um intervalo de células no Excel.",
+        "subject": "Noções de Informática",
+        "topic": "Microsoft Excel"
+    },
+    {
+        "question": "Qual a principal diferença entre hardware e software?",
+        "options": ["Hardware é físico e software é lógico.", "Hardware é lógico e software é físico.", "Ambos são a mesma coisa.", "Hardware é para entrada de dados, software para saída.", "Hardware é mais caro que software."],
+        "correctAnswerIndex": 0,
+        "explanation": "Hardware refere-se aos componentes físicos de um computador (ex: teclado, monitor), enquanto software são os programas e sistemas (ex: Windows, Word).",
+        "subject": "Noções de Informática",
+        "topic": "Hardware e Software"
+    },
+    {
+        "question": "Qual a função do sistema operacional em um computador?",
+        "options": ["Apenas exibir imagens e vídeos.", "Gerenciar o hardware e software do computador.", "Apenas navegar na internet.", "Escrever textos e criar apresentações.", "Conectar o computador à energia."],
+        "correctAnswerIndex": 1,
+        "explanation": "O sistema operacional (como Windows, macOS, Linux) é o software fundamental que gerencia todos os recursos de hardware e software do computador.",
+        "subject": "Noções de Informática",
+        "topic": "Sistemas Operacionais"
+    },
+    {
+        "question": "Conforme a Lei nº 8.112/90, qual o prazo de validade do concurso público, prorrogável uma única vez, por igual período?",
+        "options": ["1 ano", "2 anos", "3 anos", "4 anos", "5 anos"],
+        "correctAnswerIndex": 1,
+        "explanation": "A Lei nº 8.112/90 estabelece que o prazo de validade do concurso público é de até dois anos, prorrogável uma única vez, por igual período (ou seja, por mais dois anos).",
+        "subject": "Legislação",
+        "topic": "Lei nº 8.112/90"
+    },
+    {
+        "question": "A Constituição Federal de 1988 estabelece que a lei não prejudicará o direito adquirido, o ato jurídico perfeito e a:",
+        "options": ["Coisa julgada", "Sentença judicial", "Decisão administrativa", "Súmula vinculante", "Dignidade da pessoa humana"],
+        "correctAnswerIndex": 0,
+        "explanation": "O Art. 5º, XXXVI, da CF/88, garante que 'a lei não prejudicará o direito adquirido, o ato jurídico perfeito e a coisa julgada'.",
+        "subject": "Legislação",
+        "topic": "CF/88 - Direitos e Garantias Fundamentais"
+    },
+    {
+        "question": "De acordo com a Lei de Acesso à Informação (Lei nº 12.527/2011), o sigilo de informações consideradas imprescindíveis à segurança da sociedade ou do Estado pode ser classificado em ultrassecreto, secreto e:",
+        "options": ["Confidencial", "Restrito", "Reservado", "Público", "Temporário"],
+        "correctAnswerIndex": 2,
+        "explanation": "A Lei nº 12.527/2011 (LAI) classifica as informações sigilosas em ultrassecreta, secreta e Reservado.",
+        "subject": "Legislação",
+        "topic": "Lei de Acesso à Informação (LAI)"
+    },
+    {
+        "question": "A Lei nº 8.429/92 (Lei de Improbidade Administrativa) trata das sanções aplicáveis aos agentes públicos nos casos de enriquecimento ilícito no exercício de mandato, cargo, emprego ou função na administração pública. Qual dos princípios abaixo não é diretamente violado por um ato de improbidade administrativa?",
+        "options": ["Legalidade", "Impessoalidade", "Moralidade", "Publicidade", "Duração razoável do processo"],
+        "correctAnswerIndex": 4,
+        "explanation": "Os atos de improbidade administrativa violam diretamente os princípios da legalidade, impessoalidade, moralidade e publicidade. O princípio da duração razoável do processo está mais ligado à celeridade processual.",
+        "subject": "Legislação",
+        "topic": "Lei de Improbidade Administrativa"
+    },
+    {
+        "question": "A Lei nº 14.133/2021 (Nova Lei de Licitações e Contratos Administrativos) revogou, dentre outras leis, a Lei nº 8.666/93. Qual das modalidades de licitação abaixo NÃO está prevista na nova lei?",
+        "options": ["Concorrência", "Pregão", "Concurso", "Tomada de Preços", "Diálogo Competitivo"],
+        "correctAnswerIndex": 3,
+        "explanation": "A Lei nº 14.133/2021 (Nova Lei de Licitações) não prevê a modalidade 'Tomada de Preços'. As modalidades são: pregão, concorrência, concurso, leilão e diálogo competitivo.",
+        "subject": "Legislação",
+        "topic": "Nova Lei de Licitações"
+    },
+    {
+        "question": "No âmbito da Lei nº 13.709/2018 (Lei Geral de Proteção de Dados - LGPD), o que é o 'titular de dados'?",
+        "options": ["A pessoa física a quem se referem os dados pessoais que são objeto de tratamento.", "A pessoa jurídica de direito público que realiza o tratamento de dados.", "O órgão de segurança pública responsável pela fiscalização da lei.", "A empresa que coleta os dados dos usuários.", "O servidor público que armazena os dados."],
+        "correctAnswerIndex": 0,
+        "explanation": "O titular de dados é a pessoa natural (física) a quem se referem os dados pessoais que são objeto de tratamento, conforme definido na LGPD.",
+        "subject": "Legislação",
+        "topic": "Lei Geral de Proteção de Dados (LGPD)"
+    },
+    {
+        "question": "Qual o princípio da administração pública que exige que os atos administrativos sejam praticados para atender ao interesse público, e não a interesses privados?",
+        "options": ["Legalidade", "Impessoalidade", "Moralidade", "Publicidade", "Eficiência"],
+        "correctAnswerIndex": 1,
+        "explanation": "O princípio da impessoalidade exige que a atuação da Administração Pública seja voltada para o interesse público, sem favorecimentos ou perseguições pessoais.",
+        "subject": "Legislação",
+        "topic": "Princípios da Administração Pública"
+    },
+    {
+        "question": "Conforme a Lei nº 9.784/99, que regula o processo administrativo no âmbito da Administração Pública Federal, os prazos processuais são contados em dias:",
+        "options": ["Corridos", "Úteis", "Úteis, exceto sábados e domingos", "Corridos, exceto feriados", "A critério da autoridade"],
+        "correctAnswerIndex": 0,
+        "explanation": "A Lei nº 9.784/99 estabelece que os prazos são contados em dias corridos, excluindo-se o dia do começo e incluindo-se o do vencimento.",
+        "subject": "Legislação",
+        "topic": "Processo Administrativo Federal"
+    },
+    {
+        "question": "De acordo com a Lei de Improbidade Administrativa (Lei nº 8.429/92), o ressarcimento integral do dano causado ao erário é uma sanção para qual tipo de ato de improbidade?",
+        "options": ["Atos que importam enriquecimento ilícito", "Atos que causam prejuízo ao erário", "Atos que atentam contra os princípios da administração pública", "Todos os tipos de atos de improbidade", "Nenhuma das alternativas"],
+        "correctAnswerIndex": 1,
+        "explanation": "O ressarcimento integral do dano é uma sanção específica para os atos de improbidade que causam prejuízo ao erário, conforme o Art. 12 da Lei nº 8.429/92.",
+        "subject": "Legislação",
+        "topic": "Lei de Improbidade Administrativa"
+    },
+    {
+        "question": "Qual o órgão responsável por zelar pela proteção de dados pessoais, conforme a LGPD?",
+        "options": ["Superior Tribunal de Justiça", "Agência Nacional de Proteção de Dados (ANPD)", "Ministério Público Federal", "Controladoria-Geral da União", "Polícia Federal"],
+        "correctAnswerIndex": 1,
+        "explanation": "A Autoridade Nacional de Proteção de Dados (ANPD) é o órgão da administração pública federal responsável por zelar, implementar e fiscalizar o cumprimento da LGPD.",
+        "subject": "Legislação",
+        "topic": "Lei Geral de Proteção de Dados (LGPD)"
+    },
+    {
+        "question": "A Lei nº 13.460/2017 dispõe sobre a participação, proteção e defesa dos direitos do usuário de serviços públicos. Qual o prazo máximo para a manifestação do usuário ser respondida, salvo exceção legal?",
+        "options": ["15 dias", "20 dias", "30 dias", "45 dias", "60 dias"],
+        "correctAnswerIndex": 2,
+        "explanation": "O Art. 16 da Lei nº 13.460/2017 estabelece o prazo de 30 dias para resposta à manifestação do usuário, prorrogável justificadamente uma única vez por igual período.",
+        "subject": "Legislação",
+        "topic": "Direitos do Usuário de Serviços Públicos"
+    },
+    {
+        "question": "A Lei nº 12.846/2013 (Lei Anticorrupção) prevê a responsabilidade objetiva da pessoa jurídica pela prática de atos contra a administração pública. Isso significa que:",
+        "options": ["É necessário comprovar a culpa da pessoa jurídica.", "A pessoa jurídica responde independentemente de culpa ou dolo.", "A responsabilidade é apenas dos diretores da empresa.", "A lei só se aplica a empresas estrangeiras.", "A empresa só responde se houver condenação criminal prévia."],
+        "correctAnswerIndex": 1,
+        "explanation": "A responsabilidade objetiva significa que a pessoa jurídica é responsabilizada pelos atos lesivos contra a administração pública independentemente da comprovação de culpa ou dolo em sua conduta.",
+        "subject": "Legislação",
+        "topic": "Lei Anticorrupção"
+    },
+    {
+        "question": "Qual das seguintes situações NÃO é uma hipótese de dispensa de licitação, conforme a Nova Lei de Licitações (Lei nº 14.133/2021)?",
+        "options": ["Valores baixos (incisos de pequeno valor)", "Emergência ou calamidade pública", "Contratação de remanescente de obra, serviço ou fornecimento", "Contratação de empresa para serviço de publicidade", "Aquisição de materiais de uso pelas Forças Armadas com preços compatíveis com o mercado"],
+        "correctAnswerIndex": 3,
+        "explanation": "A contratação de serviços de publicidade não é uma hipótese de dispensa, mas sim de inexigibilidade de licitação, conforme Art. 74 da Lei nº 14.133/2021, dada a natureza singular do serviço e a notória especialização.",
+        "subject": "Legislação",
+        "topic": "Nova Lei de Licitações"
+    },
+    {
+        "question": "De acordo com a Lei nº 8.112/90, a vacância de cargo público decorre de:",
+        "options": ["Posse em outro cargo inacumulável", "Reintegração", "Reversão", "Aproveitamento", "Readaptação"],
+        "correctAnswerIndex": 0,
+        "explanation": "A vacância de cargo público ocorre, entre outras hipóteses, pela posse em outro cargo público inacumulável, conforme Art. 33, VIII, da Lei nº 8.112/90.",
+        "subject": "Legislação",
+        "topic": "Lei nº 8.112/90"
+    },
+    {
+        "question": "Qual é a principal finalidade da Lei nº 13.869/2019 (Lei de Abuso de Autoridade)?",
+        "options": ["Regular a proteção de dados pessoais.", "Definir crimes de responsabilidade para altas autoridades.", "Estabelecer crimes de abuso de autoridade praticados por agentes públicos.", "Regulamentar a Lei de Acesso à Informação.", "Disciplinar o processo administrativo federal."],
+        "correctAnswerIndex": 2,
+        "explanation": "A Lei nº 13.869/2019 define os crimes de abuso de autoridade, praticados por qualquer agente público, servidor ou não, que, no exercício de suas funções ou a pretexto de exercê-las, abuse do poder que lhe foi conferido.",
+        "subject": "Legislação",
+        "topic": "Abuso de Autoridade"
+    },
+    {
+        "question": "Qual dos seguintes não é considerado um Poder da União, conforme a Constituição Federal de 1988?",
+        "options": ["Poder Legislativo", "Poder Executivo", "Poder Judiciário", "Poder Moderador", "Todos são Poderes"],
+        "correctAnswerIndex": 3,
+        "explanation": "A Constituição Federal de 1988 estabelece os Poderes da União como Legislativo, Executivo e Judiciário. O Poder Moderador existia na Constituição do Império.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Organização dos Poderes"
+    },
+    {
+        "question": "O direito à vida é um direito fundamental. Em qual artigo da Constituição Federal ele está expresso?",
+        "options": ["Art. 1º", "Art. 2º", "Art. 3º", "Art. 4º", "Art. 5º"],
+        "correctAnswerIndex": 4,
+        "explanation": "O direito à vida é um dos direitos e deveres individuais e coletivos, previstos no Art. 5º, caput, da Constituição Federal.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Direitos e Garantias Fundamentais"
+    },
+    {
+        "question": "O habeas corpus é um remédio constitucional que visa proteger qual direito fundamental?",
+        "options": ["Direito de propriedade", "Direito à liberdade de locomoção", "Direito à saúde", "Direito à educação", "Direito de reunião"],
+        "correctAnswerIndex": 1,
+        "explanation": "O habeas corpus é um instrumento jurídico que visa proteger o direito de ir, vir e permanecer, ou seja, a liberdade de locomoção.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Remédios Constitucionais"
+    },
+    {
+        "question": "A Constituição Federal estabelece que a soberania popular será exercida pelo sufrágio universal e pelo voto direto e secreto, com valor igual para todos, e, nos termos da lei, mediante:",
+        "options": ["Plebiscito, referendo e iniciativa popular", "Ação popular e mandado de segurança", "Habeas data e habeas corpus", "Recurso extraordinário e recurso especial", "Ação civil pública e ação de improbidade"],
+        "correctAnswerIndex": 0,
+        "explanation": "O Art. 14 da CF/88 dispõe que a soberania popular será exercida pelo sufrágio universal e pelo voto direto e secreto, com valor igual para todos, e, nos termos da lei, mediante plebiscito, referendo e iniciativa popular.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Soberania Popular"
+    },
+    {
+        "question": "Qual o número mínimo de Deputados Federais para propor uma emenda à Constituição (PEC)?",
+        "options": ["1/3 dos membros de qualquer das Casas do Congresso Nacional", "2/3 dos membros da Câmara dos Deputados", "1/2 dos membros do Senado Federal", "Maioria absoluta dos membros do Congresso Nacional", "Não há número mínimo, basta a assinatura de um Deputado"],
+        "correctAnswerIndex": 0,
+        "explanation": "A proposta de emenda à Constituição pode ser apresentada por, no mínimo, um terço dos membros da Câmara dos Deputados ou do Senado Federal (Art. 60, I, da CF/88).",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Processo Legislativo Constitucional"
+    },
+    {
+        "question": "O princípio da legalidade, no direito administrativo, significa que a administração pública só pode fazer aquilo que a lei:",
+        "options": ["Permite", "Não proíbe", "Sugere", "Implicitamente autoriza", "Não menciona"],
+        "correctAnswerIndex": 0,
+        "explanation": "No Direito Administrativo, o princípio da legalidade significa que a Administração Pública só pode agir se houver lei que a autorize, ou seja, ela só pode fazer o que a lei permite.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Princípios da Administração Pública"
+    },
+    {
+        "question": "Os Direitos Sociais estão previstos a partir de qual artigo da Constituição Federal de 1988?",
+        "options": ["Art. 1º", "Art. 5º", "Art. 6º", "Art. 17", "Art. 37"],
+        "correctAnswerIndex": 2,
+        "explanation": "Os Direitos Sociais estão previstos no Título II, Capítulo II, da Constituição Federal, a partir do Art. 6º.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Direitos Sociais"
+    },
+    {
+        "question": "A garantia constitucional da 'inamovibilidade' dos juízes significa que:",
+        "options": ["Não podem ser removidos de seus cargos por ato discricionário, salvo por interesse público e com decisão de dois terços do tribunal a que pertencerem.", "Podem ser removidos livremente a qualquer momento.", "Não podem ser processados por crimes comuns.", "Têm direito a férias remuneradas em dobro.", "Não podem ter seus salários reduzidos."],
+        "correctAnswerIndex": 0,
+        "explanation": "A inamovibilidade dos juízes é uma garantia que impede sua remoção por ato discricionário da administração, assegurando sua independência (Art. 95, I, da CF/88).",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Poder Judiciário"
+    },
+    {
+        "question": "Qual o limite de idade para a aposentadoria compulsória de um servidor público, conforme a Constituição Federal?",
+        "options": ["60 anos", "65 anos", "70 anos", "75 anos", "80 anos"],
+        "correctAnswerIndex": 3,
+        "explanation": "A aposentadoria compulsória de servidores públicos ocorre aos 75 anos de idade, com proventos proporcionais ao tempo de contribuição, conforme o Art. 40, §1º, II, da CF/88.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Servidores Públicos"
+    },
+    {
+        "question": "O que é o princípio da dignidade da pessoa humana na Constituição Federal?",
+        "options": ["É a garantia de moradia para todos.", "É um dos fundamentos da República Federativa do Brasil, que busca assegurar uma vida digna a todos.", "É o direito à propriedade privada irrestrita.", "É a proteção do meio ambiente apenas.", "É a promoção da economia de mercado."],
+        "correctAnswerIndex": 1,
+        "explanation": "A dignidade da pessoa humana é um dos fundamentos da República Federativa do Brasil (Art. 1º, III, da CF/88), permeando todo o ordenamento jurídico e buscando assegurar condições mínimas para uma vida digna.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Fundamentos da República"
+    },
+    {
+        "question": "Qual dos seguintes direitos NÃO é considerado um direito político fundamental na Constituição Federal?",
+        "options": ["Alistamento eleitoral", "Voto", "Elegibilidade", "Nacionalidade", "Iniciativa popular"],
+        "correctAnswerIndex": 3,
+        "explanation": "A nacionalidade é um direito fundamental, mas não se enquadra nos direitos políticos. Direitos políticos referem-se à participação do cidadão na vida política do Estado.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Direitos Políticos"
+    },
+    {
+        "question": "Qual o instrumento utilizado para o controle de constitucionalidade de leis ou atos normativos, em tese, perante o Supremo Tribunal Federal?",
+        "options": ["Habeas corpus", "Mandado de segurança", "Ação Direta de Inconstitucionalidade (ADI)", "Ação Popular", "Habeas data"],
+        "correctAnswerIndex": 2,
+        "explanation": "A Ação Direta de Inconstitucionalidade (ADI) é o instrumento processual de controle concentrado de constitucionalidade, utilizada para questionar a compatibilidade de lei ou ato normativo com a Constituição Federal, diretamente no STF.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Controle de Constitucionalidade"
+    },
+    {
+        "question": "De acordo com a Constituição Federal, qual o poder que tem a função típica de julgar e aplicar a lei aos casos concretos?",
+        "options": ["Poder Legislativo", "Poder Executivo", "Poder Judiciário", "Ministério Público", "Tribunal de Contas"],
+        "correctAnswerIndex": 2,
+        "explanation": "O Poder Judiciário tem como função típica a jurisdição, ou seja, a capacidade de julgar e aplicar a lei aos casos concretos, dirimindo conflitos.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Funções Essenciais à Justiça"
+    },
+    {
+        "question": "A Constituição Federal de 1988 é considerada uma Constituição:",
+        "options": ["Outorgada", "Cesarista", "Dogmática", "Promulgada", "Flexível"],
+        "correctAnswerIndex": 3,
+        "explanation": "A CF/88 é uma Constituição promulgada, pois foi elaborada e votada por uma Assembleia Constituinte, com participação popular, e entrou em vigor após a sua promulgação.",
+        "subject": "Noções de Direito Constitucional",
+        "topic": "Classificação das Constituições"
+    },
+    {
+        "question": "Qual o atributo do ato administrativo que permite à Administração Pública executá-lo diretamente, sem a necessidade de intervenção judicial?",
+        "options": ["Presunção de legitimidade", "Autoexecutoriedade", "Tipicidade", "Imperatividade", "Revogabilidade"],
+        "correctAnswerIndex": 1,
+        "explanation": "A autoexecutoriedade é o atributo que permite à Administração Pública executar seus atos diretamente, sem prévia autorização do Poder Judiciário.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Atos Administrativos"
+    },
+    {
+        "question": "Os bens públicos de uso comum do povo são aqueles destinados à utilização por todos, sem restrições. Um exemplo é:",
+        "options": ["Um edifício de repartição pública", "Um veículo oficial", "Uma praça pública", "Um terreno de marinha", "Uma rodovia federal"],
+        "correctAnswerIndex": 2,
+        "explanation": "Praças públicas são exemplos clássicos de bens públicos de uso comum do povo, abertos à utilização por toda a coletividade.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Bens Públicos"
+    },
+    {
+        "question": "A Lei nº 8.429/92 (Lei de Improbidade Administrativa) classifica os atos de improbidade em três categorias. Qual das opções abaixo NÃO é uma dessas categorias?",
+        "options": ["Atos que importam enriquecimento ilícito", "Atos que causam prejuízo ao erário", "Atos que atentam contra os princípios da administração pública", "Atos que implicam renúncia de receita", "Atos de abuso de poder"],
+        "correctAnswerIndex": 3,
+        "explanation": "As três categorias de atos de improbidade administrativa são: atos que importam enriquecimento ilícito, atos que causam prejuízo ao erário e atos que atentam contra os princípios da administração pública. 'Atos que implicam renúncia de receita' não é uma categoria autônoma.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Improbidade Administrativa"
+    },
+    {
+        "question": "Qual o nome do ato pelo qual a Administração Pública declara a invalidade de um ato administrativo ilegítimo ou ilegal, com efeitos retroativos?",
+        "options": ["Revogação", "Anulação", "Convalidação", "Caducidade", "Desfazimento"],
+        "correctAnswerIndex": 1,
+        "explanation": "A anulação é o ato pelo qual a Administração (ou o Poder Judiciário) declara a invalidade de um ato administrativo que nasceu com vício de legalidade, com efeitos 'ex tunc' (retroativos).",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Extinção dos Atos Administrativos"
+    },
+    {
+        "question": "O princípio da publicidade, na administração pública, exige que os atos administrativos sejam divulgados. Qual a principal exceção a esse princípio?",
+        "options": ["Atos de menor importância", "Atos que tratam de segurança nacional ou intimidade", "Atos que dependem de aprovação judicial", "Atos discricionários", "Atos sem efeito externo"],
+        "correctAnswerIndex": 1,
+        "explanation": "O princípio da publicidade pode ser mitigado em casos de segurança da sociedade ou do Estado, ou para a preservação da intimidade, vida privada, honra e imagem das pessoas.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Princípios da Administração Pública"
+    },
+    {
+        "question": "Qual o instrumento utilizado pela Administração Pública para delegar a execução de um serviço público a uma pessoa jurídica de direito privado, mediante licitação?",
+        "options": ["Permissão", "Autorização", "Concessão", "Convênio", "Contrato de gestão"],
+        "correctAnswerIndex": 2,
+        "explanation": "A concessão de serviço público é o instrumento pelo qual a Administração Pública delega, mediante licitação, a execução de um serviço público a pessoa jurídica ou consórcio de empresas, que o executará por sua conta e risco, por prazo determinado.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Serviços Públicos"
+    },
+    {
+        "question": "Qual a característica que torna um ato administrativo irretocável pela própria Administração, em razão do decurso do tempo ou da consolidação de direitos?",
+        "options": ["Imperatividade", "Autoexecutoriedade", "Presunção de legitimidade", "Estabilidade", "Perpetuidade"],
+        "correctAnswerIndex": 3,
+        "explanation": "A estabilidade de um ato administrativo se refere à sua permanência e impossibilidade de ser revogado ou anulado, muitas vezes devido à consumação de seus efeitos ou decurso de prazo.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Atos Administrativos"
+    },
+    {
+        "question": "Qual a diferença entre desconcentração e descentralização administrativa?",
+        "options": ["Desconcentração é a distribuição interna de competências, enquanto descentralização é a criação de novas entidades.", "Desconcentração é a criação de novas entidades, enquanto descentralização é a distribuição interna de competências.", "Ambas significam a mesma coisa.", "Desconcentração envolve delegação, descentralização não.", "Descentralização é vertical, desconcentração é horizontal."],
+        "correctAnswerIndex": 0,
+        "explanation": "Desconcentração é a distribuição de competências dentro da mesma pessoa jurídica (criação de órgãos). Descentralização é a distribuição de competências para outras pessoas jurídicas (criação de autarquias, fundações, etc.).",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Organização Administrativa"
+    },
+    {
+        "question": "Ato administrativo que cria, modifica ou extingue direitos, impondo obrigações ao administrado, é classificado como:",
+        "options": ["Normativo", "Ordinatório", "Negocial", "Enunciativo", "Punitivo"],
+        "correctAnswerIndex": 2,
+        "explanation": "Atos administrativos negociais são aqueles em que a Administração Pública expressa sua vontade para conceder direitos, como licenças, alvarás e autorizações, que geram efeitos para o administrado.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Atos Administrativos"
+    },
+    {
+        "question": "Qual das características abaixo NÃO é um atributo da supremacia do interesse público?",
+        "options": ["Presunção de legitimidade dos atos administrativos", "Poder extroverso do Estado", "Disponibilidade dos bens públicos", "Autoexecutoriedade dos atos administrativos", "Imunidade tributária"],
+        "correctAnswerIndex": 4,
+        "explanation": "A imunidade tributária é uma limitação ao poder de tributar, prevista na Constituição, e não um atributo da supremacia do interesse público no contexto do direito administrativo.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Princípios do Direito Administrativo"
+    },
+    {
+        "question": "O poder de polícia administrativa consiste na prerrogativa de a Administração Pública:",
+        "options": ["Aplicar penas criminais.", "Regular e fiscalizar atividades que afetem o interesse público.", "Julgar litígios entre particulares.", "Criar leis para a sociedade.", "Intervir diretamente na economia privada sem restrições."],
+        "correctAnswerIndex": 1,
+        "explanation": "O poder de polícia é a faculdade que a Administração Pública tem de condicionar e restringir o exercício de direitos individuais em prol do interesse da coletividade.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Poderes Administrativos"
+    },
+    {
+        "question": "A Lei nº 9.784/99 estabelece o direito de o administrado formular alegações e apresentar documentos antes da decisão. Isso se relaciona com qual princípio?",
+        "options": ["Eficiência", "Razoabilidade", "Proporcionalidade", "Contraditório e Ampla Defesa", "Segurança jurídica"],
+        "correctAnswerIndex": 3,
+        "explanation": "O direito de formular alegações e apresentar documentos está diretamente ligado aos princípios do contraditório e da ampla defesa, que asseguram ao administrado a participação no processo administrativo.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Processo Administrativo"
+    },
+    {
+        "question": "Qual a finalidade do tombamento no Direito Administrativo?",
+        "options": ["Desapropriar bens para fins de reforma agrária.", "Registrar imóveis em cartório.", "Proteger bens de valor histórico, artístico, cultural, turístico, paisagístico ou científico.", "Estabelecer regras de uso do solo urbano.", "Regular o processo de licitação."],
+        "correctAnswerIndex": 2,
+        "explanation": "O tombamento é uma forma de intervenção do Estado na propriedade privada que visa a proteger bens de valor cultural, histórico, artístico, arqueológico, paisagístico, científico, etc., por meio de registro em livro próprio.",
+        "subject": "Noções de Direito Administrativo",
+        "topic": "Intervenção do Estado na Propriedade"
+    },
+    {
+        "question": "Conforme o Código Civil brasileiro, qual a idade em que uma pessoa atinge a maioridade civil, tornando-se plenamente capaz para todos os atos da vida civil?",
+        "options": ["16 anos", "18 anos", "21 anos", "14 anos", "12 anos"],
+        "correctAnswerIndex": 1,
+        "explanation": "O Art. 5º do Código Civil estabelece que a menoridade cessa aos dezoito anos completos, quando a pessoa fica habilitada à prática de todos os atos da vida civil.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Pessoas Naturais"
+    },
+    {
+        "question": "Qual o vício do consentimento que ocorre quando uma das partes declara sua vontade por engano, sem que a outra parte tenha agido com malícia?",
+        "options": ["Dolo", "Coação", "Lesão", "Erro", "Estado de perigo"],
+        "correctAnswerIndex": 3,
+        "explanation": "O erro é um vício do consentimento em que o declarante se engana sobre a substância do negócio, o objeto principal ou a qualidade essencial da pessoa, sem que haja má-fé da outra parte.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Negócio Jurídico"
+    },
+    {
+        "question": "A extinção da obrigação pelo pagamento é a forma mais comum. Qual o instituto que permite ao devedor depositar a coisa devida em juízo quando o credor se recusa a recebê-la?",
+        "options": ["Novação", "Compensação", "Cessão de crédito", "Consignação em pagamento", "Remissão"],
+        "correctAnswerIndex": 3,
+        "explanation": "A consignação em pagamento permite ao devedor liberar-se da obrigação quando o credor se recusa a receber o pagamento, não o recebe ou há dúvida sobre quem deve receber, depositando a quantia ou a coisa devida em juízo.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Obrigações"
+    },
+    {
+        "question": "No direito civil, o que é um 'bem imóvel por natureza'?",
+        "options": ["Um bem que pode ser movido sem dano", "Um bem que é incorporado artificialmente ao solo", "Um bem que não pode ser removido sem destruição ou alteração", "Um bem que se move por força própria", "Um bem que é considerado imóvel por determinação legal"],
+        "correctAnswerIndex": 2,
+        "explanation": "Bens imóveis por natureza são o solo e tudo o que se lhe incorpora naturalmente, como árvores e frutos pendentes, não podendo ser removidos sem destruição ou alteração da substância.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Bens"
+    },
+    {
+        "question": "Qual o instituto que extingue a pretensão de exigir um direito pelo decurso do tempo, sem que o direito em si seja extinto?",
+        "options": ["Decadência", "Prescrição", "Perempção", "Preclusão", "Anulação"],
+        "correctAnswerIndex": 1,
+        "explanation": "A prescrição é a perda do direito de ação (pretensão) pelo decurso do tempo, devido à inércia do titular. O direito material (a dívida, por exemplo) continua existindo, mas não pode ser cobrado judicialmente.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Prescrição e Decadência"
+    },
+    {
+        "question": "Qual a modalidade de testamento que pode ser feito por qualquer pessoa, com a presença de duas testemunhas, sem a necessidade de tabelião?",
+        "options": ["Público", "Cerrado", "Particular", "Marítimo", "Aeronáutico"],
+        "correctAnswerIndex": 2,
+        "explanation": "O testamento particular é escrito pelo próprio testador ou por alguém a seu rogo, lido por ele na presença de três testemunhas, que o subscrevem. Não exige a intervenção de tabelião.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Direito das Sucessões"
+    },
+    {
+        "question": "No contrato de compra e venda, qual o vício redibitório?",
+        "options": ["Um defeito oculto que torna a coisa imprópria ao uso ou lhe diminui o valor.", "Um defeito visível no momento da entrega.", "Uma cláusula contratual abusiva.", "A falta de pagamento do preço.", "O arrependimento do comprador."],
+        "correctAnswerIndex": 0,
+        "explanation": "Vícios redibitórios são defeitos ocultos que tornam a coisa imprópria ao uso a que é destinada ou lhe diminuem o valor, de modo que o adquirente não a teria adquirido ou a teria adquirido por preço menor se os soubesse.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Contratos"
+    },
+    {
+        "question": "Conforme o Código Civil, a incapacidade relativa cessa aos quantos anos, em regra?",
+        "options": ["16 anos", "18 anos", "21 anos", "14 anos", "12 anos"],
+        "correctAnswerIndex": 1,
+        "explanation": "A incapacidade relativa, em regra, cessa quando a pessoa atinge 18 anos, tornando-se plenamente capaz. Há exceções como a emancipação.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Pessoas Naturais"
+    },
+    {
+        "question": "O que é 'domicílio' no Direito Civil?",
+        "options": ["A residência provisória de uma pessoa.", "O local onde a pessoa reside com ânimo definitivo.", "Qualquer lugar onde a pessoa se encontra.", "O local de trabalho da pessoa.", "A cidade onde a pessoa nasceu."],
+        "correctAnswerIndex": 1,
+        "explanation": "Domicílio é o lugar onde a pessoa estabelece sua residência com ânimo definitivo, conforme o Código Civil.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Pessoas Naturais"
+    },
+    {
+        "question": "Qual o nome do instituto jurídico que permite a uma pessoa adquirir a propriedade de um bem imóvel pela posse prolongada e ininterrupta, cumprindo certos requisitos legais?",
+        "options": ["Arrendamento", "Hipoteca", "Usufruto", "Usucapião", "Servidão"],
+        "correctAnswerIndex": 3,
+        "explanation": "Usucapião é a aquisição da propriedade ou de outro direito real pelo decurso do tempo e pelo preenchimento dos requisitos estabelecidos em lei.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Direito das Coisas"
+    },
+    {
+        "question": "No âmbito do Direito Civil, o que é 'responsabilidade civil extracontratual'?",
+        "options": ["A responsabilidade que surge de um contrato.", "A responsabilidade que não decorre de contrato, mas de um ato ilícito que causa dano a outrem.", "A responsabilidade do Estado por atos de seus agentes.", "A responsabilidade por danos causados em desastres naturais.", "A responsabilidade por inadimplemento de uma obrigação."],
+        "correctAnswerIndex": 1,
+        "explanation": "A responsabilidade civil extracontratual (ou aquiliana) surge de um ato ilícito que causa dano a outrem, independentemente de haver um contrato prévio entre as partes.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Responsabilidade Civil"
+    },
+    {
+        "question": "Qual a finalidade principal do registro público de imóveis?",
+        "options": ["Comprovar a posse do imóvel.", "Conferir publicidade e segurança jurídica à propriedade imobiliária.", "Determinar o valor de mercado do imóvel.", "Estabelecer as regras de construção.", "Regular o aluguel de imóveis."],
+        "correctAnswerIndex": 1,
+        "explanation": "O registro público de imóveis tem como finalidade principal dar publicidade aos atos de transmissão e oneração de bens imóveis, conferindo segurança jurídica às relações imobiliárias.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Direito das Coisas"
+    },
+    {
+        "question": "No que concerne aos bens, o que são 'frutos civis'?",
+        "options": ["Produtos da terra.", "Criações de animais.", "Juros de capital, aluguéis de imóveis e dividendos de ações.", "Materiais extraídos de minas.", "O que é colhido de árvores."],
+        "correctAnswerIndex": 2,
+        "explanation": "Frutos civis são rendimentos periódicos que provêm da utilização de uma coisa, como os juros, aluguéis e dividendos.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Bens"
+    },
+    {
+        "question": "Qual o nome do instituto que permite a uma pessoa exigir a devolução de algo que pagou indevidamente?",
+        "options": ["Enriquecimento ilícito", "Repetição do indébito", "Novação", "Compensação", "Cessão de dívida"],
+        "correctAnswerIndex": 1,
+        "explanation": "A repetição do indébito é o direito de reaver o que foi pago indevidamente, ou seja, aquilo que não era devido ou que foi pago a quem não era credor.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Obrigações"
+    },
+    {
+        "question": "Qual a diferença entre 'dolo' e 'culpa' no Direito Civil?",
+        "options": ["Dolo é a intenção de causar dano, culpa é negligência ou imprudência.", "Dolo é a imprudência, culpa é a negligência.", "Ambos significam a mesma coisa.", "Dolo é sempre criminal, culpa é sempre civil.", "Dolo é ausência de vontade, culpa é vontade consciente."],
+        "correctAnswerIndex": 0,
+        "explanation": "No Direito Civil, dolo é a intenção de causar prejuízo, enquanto culpa é a conduta negligente, imprudente ou imperita que gera um dano, sem a intenção de causá-lo.",
+        "subject": "Noções de Direito Civil",
+        "topic": "Atos Ilícitos"
+    },
+    {
+        "question": "De acordo com o Código de Processo Civil, qual o nome da petição inicial que é indeferida pelo juiz por não preencher os requisitos legais ou por ser inepta?",
+        "options": ["Contestação", "Réplica", "Recurso", "Emenda à inicial", "Petição inicial inepta"],
+        "correctAnswerIndex": 4,
+        "explanation": "Uma petição inicial inepta é aquela que não preenche os requisitos legais essenciais para a sua validade, impedindo o desenvolvimento regular do processo.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Petição Inicial"
+    },
+    {
+        "question": "Qual o meio de prova que consiste na inspeção judicial realizada pelo juiz em local, pessoa ou coisa, para esclarecimento de fato que interesse à causa?",
+        "options": ["Depoimento pessoal", "Confissão", "Testemunha", "Perícia", "Inspeção judicial"],
+        "correctAnswerIndex": 4,
+        "explanation": "A inspeção judicial é um meio de prova em que o juiz, pessoalmente, verifica um fato, pessoa ou coisa que seja relevante para a resolução do caso.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Provas"
+    },
+    {
+        "question": "O que é 'litisconsórcio' no processo civil?",
+        "options": ["A intervenção de terceiros no sistema.", "A reunião de várias ações em um único processo.", "A pluralidade de partes no mesmo polo da relação processual.", "O conflito de competência entre juízos.", "A suspensão do processo por convenção das partes."],
+        "correctAnswerIndex": 2,
+        "explanation": "Litisconsórcio ocorre quando há pluralidade de partes em um dos polos da relação processual (litisconsórcio ativo ou passivo), ou em ambos (litisconsórcio misto).",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Partes e Terceiros"
+    },
+    {
+        "question": "Qual o prazo para a parte interpor recurso de apelação contra uma sentença, no processo civil, salvo disposição em contrário?",
+        "options": ["5 dias", "10 dias", "15 dias", "30 dias", "Não há prazo fixo"],
+        "correctAnswerIndex": 2,
+        "explanation": "O prazo para interpor o recurso de apelação é de 15 dias úteis, contados da intimação da sentença, conforme o Código de Processo Civil.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Recursos"
+    },
+    {
+        "question": "A ausência de qual pressuposto processual impede a constituição válida e regular do processo, levando à sua extinção sem resolução de mérito?",
+        "options": ["Interesse de agir", "Legitimidade das partes", "Possibilidade jurídica do pedido", "Capacidade postulatória", "Citação válida"],
+        "correctAnswerIndex": 4,
+        "explanation": "A citação válida é um pressuposto de existência e de desenvolvimento válido e regular do processo. Sem ela, o processo não se constitui validamente.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Pressupostos Processuais"
+    },
+    {
+        "question": "Qual o nome do instituto que permite a uma pessoa que não é parte no processo intervir, em defesa de interesse próprio, relacionado ao objeto da demanda?",
+        "options": ["Assistência", "Denunciação da lide", "Chamamento ao processo", "Amicus curiae", "Desconsideração da personalidade jurídica"],
+        "correctAnswerIndex": 0,
+        "explanation": "A assistência é uma modalidade de intervenção de terceiros em que uma pessoa, não sendo parte, ingressa no processo para auxiliar uma das partes, pois possui interesse jurídico na vitória daquela parte.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Intervenção de Terceiros"
+    },
+    {
+        "question": "O que significa 'coisa julgada' no processo civil?",
+        "options": ["A decisão judicial que ainda cabe recurso.", "A decisão judicial irrecorrível, sobre a qual não há mais possibilidade de discussão.", "A sentença que homologa um acordo entre as partes.", "A decisão que extingue o processo sem resolução de mérito.", "A decisão provisória proferida em caráter de urgência."],
+        "correctAnswerIndex": 1,
+        "explanation": "A coisa julgada é a qualidade da sentença que a torna imutável e indiscutível, não podendo mais ser modificada por meio de recurso. Garante a segurança jurídica.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Coisa Julgada"
+    },
+    {
+        "question": "No processo de execução, o que é penhora?",
+        "options": ["A fase inicial do processo.", "A apreensão judicial de bens do devedor para garantir o pagamento da dívida.", "O ato de intimação do executado.", "A venda dos bens do devedor em leilão.", "A extinção da dívida."],
+        "correctAnswerIndex": 1,
+        "explanation": "A penhora é o ato judicial de individualizar e apreender bens do devedor para assegurar o cumprimento de uma obrigação, garantindo a execução forçada.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Execução Civil"
+    },
+    {
+        "question": "Qual o princípio processual civil que garante às partes o direito de participar do processo, sendo-lhes dada a oportunidade de influenciar o resultado da demanda?",
+        "options": ["Juiz natural", "Devido processo legal", "Contraditório", "Publicidade", "Livre convencimento motivado"],
+        "correctAnswerIndex": 2,
+        "explanation": "O princípio do contraditório assegura às partes o direito de participar ativamente do processo, influenciando o juiz e se defendendo das alegações da parte contrária.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Princípios do Processo Civil"
+    },
+    {
+        "question": "Qual o nome do ato processual pelo qual o juiz chama o réu ao processo para que este, querendo, apresente sua defesa?",
+        "options": ["Intimação", "Notificação", "Citação", "Despacho", "Sentença"],
+        "correctAnswerIndex": 2,
+        "explanation": "A citação é o ato pelo qual o réu é chamado a integrar a relação processual, tomando ciência da existência da demanda e tendo a oportunidade de se defender.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Comunicação dos Atos Processuais"
+    },
+    {
+        "question": "No processo civil, a 'preclusão temporal' ocorre quando a parte perde a faculdade de praticar um ato processual em razão do:",
+        "options": ["Vício de forma", "Decurso do prazo legal", "Acordo entre as partes", "Ausência de interesse", "Renúncia ao direito"],
+        "correctAnswerIndex": 1,
+        "explanation": "A preclusão temporal ocorre quando a parte não pratica o ato processual dentro do prazo legal, perdendo o direito de praticá-lo.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Prazos Processuais"
+    },
+    {
+        "question": "Qual a função do agravo de instrumento no Código de Processo Civil?",
+        "options": ["Questionar a sentença final.", "Impugnar decisões interlocutórias.", "Rever acórdãos de tribunais superiores.", "Pedir a revisão de um processo já julgado.", "Discutir a coisa julgada."],
+        "correctAnswerIndex": 1,
+        "explanation": "O agravo de instrumento é o recurso cabível para impugnar decisões interlocutórias proferidas no curso do processo que causem gravame à parte e que estejam previstas no rol do Art. 1.015 do CPC.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Recursos"
+    },
+    {
+        "question": "No procedimento comum do processo civil, qual a ordem correta das fases?",
+        "options": ["Petição inicial, fase instrutória, citação, audiência, sentença.", "Petição inicial, citação, fase instrutória, audiência de conciliação, sentença.", "Petição inicial, citação, audiência de conciliação, fase instrutória, sentença.", "Citação, petição inicial, audiência, fase instrutória, sentença.", "Audiência, petição inicial, citação, fase instrutória, sentença."],
+        "correctAnswerIndex": 2,
+        "explanation": "A ordem geral no procedimento comum é: Petição inicial, citação, audiência de conciliação/mediação (se houver), contestação, fase instrutória (produção de provas) e, por fim, a sentença.",
+        "subject": "Noções de Direito Processual Civil",
+        "topic": "Procedimento Comum"
+    },
+    {
+        "question": "Qual o princípio do Direito Penal que estabelece que não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal?",
+        "options": ["Princípio da culpabilidade", "Princípio da individualização da pena", "Princípio da legalidade", "Princípio da intranscendência da pena", "Princípio da ofensividade"],
+        "correctAnswerIndex": 2,
+        "explanation": "O Princípio da Legalidade (ou da Reserva Legal) é basilar no Direito Penal, expresso no Art. 1º do Código Penal e no Art. 5º, XXXIX da CF/88: 'não há crime sem lei anterior que o defina, nem pena sem prévia cominação legal'.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Princípios do Direito Penal"
+    },
+    {
+        "question": "A legítima defesa é uma excludente de ilicitude. Para que ela seja configurada, é necessário o uso moderado dos meios necessários para repelir injusta agressão, atual ou iminente, a direito próprio ou de:",
+        "options": ["Terceiro", "Somente próprio", "Da coletividade", "Do Estado", "De qualquer pessoa, mesmo que não seja parente"],
+        "correctAnswerIndex": 0,
+        "explanation": "A legítima defesa pode ser exercida para repelir injusta agressão a direito próprio ou de terceiro, conforme o Art. 25 do Código Penal.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Excludentes de Ilicitude"
+    },
+    {
+        "question": "Qual a modalidade de culpa em que o agente, por imprudência, negligência ou imperícia, dá causa a um resultado que não queria produzir?",
+        "options": ["Dolo direto", "Dolo eventual", "Culpa consciente", "Culpa inconsciente", "Preterdolo"],
+        "correctAnswerIndex": 3,
+        "explanation": "Na culpa inconsciente, o agente não prevê o resultado, mas deveria prevê-lo e, por sua desatenção (imprudência, negligência ou imperícia), o causa.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Teoria do Crime - Culpa"
+    },
+    {
+        "question": "No crime de furto, qual o elemento subjetivo do tipo penal que se refere à intenção do agente de ter a coisa para si ou para outrem, de forma definitiva?",
+        "options": ["Animus necandi", "Animus laedendi", "Animus furandi", "Animus abutendi", "Animus solvendi"],
+        "correctAnswerIndex": 2,
+        "explanation": "'Animus furandi' é a expressão latina que designa a intenção de assenhorear-se de coisa alheia, ou seja, a intenção de furtar.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Crimes Contra o Patrimônio"
+    },
+    {
+        "question": "O que é 'concurso de pessoas' no Direito Penal?",
+        "options": ["A prática de crimes em diferentes localidades.", "A participação de várias pessoas na prática da mesma infração penal.", "A ocorrência de vários crimes por um único agente.", "A soma de penas de diferentes crimes.", "A conexão entre diferentes processos criminais."],
+        "correctAnswerIndex": 1,
+        "explanation": "Concurso de pessoas ocorre quando duas ou mais pessoas, agindo com liame subjetivo, contribuem para a prática de uma mesma infração penal.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Concurso de Pessoas"
+    },
+    {
+        "question": "Qual a causa de extinção da punibilidade que ocorre quando o Estado perde o direito de punir pelo decurso do tempo, sem que a pena tenha sido aplicada ou executada?",
+        "options": ["Decadência", "Perempção", "Prescrição", "Anistia", "Graça"],
+        "correctAnswerIndex": 2,
+        "explanation": "A prescrição é uma causa de extinção da punibilidade em que o Estado perde o direito de aplicar ou executar a pena devido ao decurso de determinado prazo legal.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Extinção da Punibilidade"
+    },
+    {
+        "question": "No crime de homicídio, qual a circunstância que o torna qualificado?",
+        "options": ["Ter sido cometido com emprego de veneno, fogo, explosivo, asfixia, tortura ou outro meio insidioso ou cruel, ou de que possa resultar perigo comum.", "Ter sido cometido por motivo fútil.", "Ter sido cometido em legítima defesa.", "Ter sido cometido por erro de execução.", "Ter sido cometido em estado de necessidade."],
+        "correctAnswerIndex": 0,
+        "explanation": "O uso de meios cruéis ou que gerem perigo comum (veneno, fogo, explosivo, asfixia, tortura) são qualificadoras do homicídio, aumentando a pena, conforme o Art. 121, §2º, III, do Código Penal.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Crimes Contra a Pessoa"
+    },
+    {
+        "question": "Qual o crime que consiste em enganar alguém para obter vantagem ilícita, causando prejuízo a outrem?",
+        "options": ["Furto", "Roubo", "Estelionato", "Apropriação indébita", "Extorsão"],
+        "correctAnswerIndex": 2,
+        "explanation": "O estelionato (Art. 171 do CP) é o crime onde o agente, utilizando-se de fraude, ardil ou qualquer outro meio fraudulento, induz ou mantém a vítima em erro para obter vantagem ilícita para si ou para outrem, causando prejuízo à vítima.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Crimes Contra o Patrimônio"
+    },
+    {
+        "question": "O que é 'culpabilidade' no Direito Penal?",
+        "options": ["A conduta ilícita do agente.", "A relação de causalidade entre a conduta e o resultado.", "O juízo de reprovabilidade que recai sobre o autor de um fato típico e ilícito.", "A ausência de dolo ou culpa.", "A ocorrência de uma excludente de ilicitude."],
+        "correctAnswerIndex": 2,
+        "explanation": "A culpabilidade é o juízo de reprovabilidade pessoal que se faz sobre a conduta do agente que praticou um fato típico e ilícito, podendo-se-lhe exigir conduta diversa.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Teoria do Crime - Culpabilidade"
+    },
+    {
+        "question": "Qual a diferença entre 'crime consumado' e 'tentado'?",
+        "options": ["Crime consumado não tem punição, tentado tem.", "Crime consumado atinge o resultado, tentado não atinge por circunstâncias alheias à vontade do agente.", "Crime consumado é culposo, tentado é doloso.", "Crime consumado não é punível, tentado é.", "Não há diferença."],
+        "correctAnswerIndex": 1,
+        "explanation": "O crime é consumado quando nele se reúnem todos os elementos de sua definição legal. Tentado é quando, iniciada a execução, não se consuma por circunstâncias alheias à vontade do agente.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Iter Criminis"
+    },
+    {
+        "question": "Qual o crime de 'peculato'?",
+        "options": ["Furto de bem público por particular.", "Apropriação, desvio ou subtração de bem público por funcionário público.", "Extorsão praticada por funcionário público.", "Corrupção passiva praticada por particular.", "Tráfico de influência por funcionário público."],
+        "correctAnswerIndex": 1,
+        "explanation": "Peculato (Art. 312 do CP) é o crime praticado por funcionário público contra a administração em geral, que consiste em apropriar-se de dinheiro, valor ou qualquer outro bem móvel, público ou particular, de que tem a posse em razão do cargo, ou desviá-lo, em proveito próprio ou alheio.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Crimes Contra a Administração Pública"
+    },
+    {
+        "question": "O que é 'reincidência' no Direito Penal?",
+        "options": ["Cometer o mesmo crime várias vezes.", "Cometer um novo crime após ter sido definitivamente condenado por crime anterior.", "A prática de vários crimes em concurso formal.", "O perdão judicial.", "A diminuição da pena por bom comportamento."],
+        "correctAnswerIndex": 1,
+        "explanation": "A reincidência ocorre quando o agente comete um novo crime após ter transitado em julgado a sentença que o condenou por crime anterior.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Cálculo da Pena"
+    },
+    {
+        "question": "A pena de multa, no Direito Penal, consiste no pagamento de uma quantia em dinheiro, calculada em:",
+        "options": ["Salários mínimos.", "Dias-multa.", "Percentual do patrimônio do réu.", "Semanas-multa.", "Valor fixo estabelecido em lei."],
+        "correctAnswerIndex": 1,
+        "explanation": "A pena de multa é calculada em dias-multa, cujo valor de cada dia-multa é fixado pelo juiz e pode variar conforme a situação econômica do réu.",
+        "subject": "Noções de Direito Penal",
+        "topic": "Penas"
+    },
+    {
+        "question": "Qual a fase do processo penal em que são produzidas as provas, ouvidas as testemunhas e realizado o interrogatório do acusado?",
+        "options": ["Inquérito policial", "Fase postulatória", "Instrução criminal", "Sentença", "Recursos"],
+        "correctAnswerIndex": 2,
+        "explanation": "A instrução criminal é a fase processual destinada à produção das provas, à oitiva das testemunhas e ao interrogatório do acusado, visando à formação do convencimento do juiz.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Fases do Processo Penal"
+    },
+    {
+        "question": "O que é 'habeas data' no processo penal?",
+        "options": ["Um remédio constitucional para proteger o direito de locomoção.", "Um instrumento para obter acesso a informações pessoais constantes de bancos de dados governamentais.", "Um recurso contra decisões judiciais.", "Uma ação para anular atos administrativos.", "Um tipo de prisão provisória."],
+        "correctAnswerIndex": 1,
+        "explanation": "O habeas data é um remédio constitucional que assegura ao indivíduo o acesso a informações sobre si mesmo, constantes de registros ou bancos de dados de entidades governamentais ou de caráter público, bem como para a retificação de dados.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Remédios Constitucionais"
+    },
+    {
+        "question": "Qual o princípio que proíbe que uma pessoa seja julgada mais de uma vez pelo mesmo fato criminoso?",
+        "options": ["Duplo grau de jurisdição", "Devido processo legal", "Ampla defesa", "Contraditório", "Non bis in idem"],
+        "correctAnswerIndex": 4,
+        "explanation": "O princípio do 'non bis in idem' (não duas vezes pela mesma coisa) impede que uma pessoa seja processada ou julgada novamente pelo mesmo fato criminoso, uma vez que já houve uma decisão final.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Princípios do Processo Penal"
+    },
+    {
+        "question": "A prisão em flagrante delito pode ser realizada por qualquer do povo ou pela autoridade policial e seus agentes. Em qual situação a prisão em flagrante é considerada 'própria'?",
+        "options": ["Quando o agente é perseguido, logo após a prática da infração.", "Quando o agente é encontrado logo depois com instrumentos do crime.", "Quando o agente está cometendo a infração ou acaba de cometê-la.", "Quando há mandado de prisão expedido pela autoridade judicial.", "Quando o agente se entrega voluntariamente à polícia."],
+        "correctAnswerIndex": 2,
+        "explanation": "A prisão em flagrante própria (ou perfeita) ocorre quando o agente está cometendo a infração penal ou acaba de cometê-la.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Prisão e Liberdade Provisória"
+    },
+    {
+        "question": "Qual o recurso cabível contra a decisão que pronuncia o réu no procedimento do Tribunal do Júri?",
+        "options": ["Apelação", "Recurso em Sentido Estrito (RESE)", "Agravo de instrumento", "Habeas corpus", "Embargos de declaração"],
+        "correctAnswerIndex": 1,
+        "explanation": "O recurso cabível contra a decisão de pronúncia no procedimento do Tribunal do Júri é o Recurso em Sentido Estrito (RESE), conforme o Art. 581, IV, do Código de Processo Penal.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Recursos em Processo Penal"
+    },
+    {
+        "question": "No processo penal, o que é 'nulidade absoluta'?",
+        "options": ["Um vício sanável que não causa prejuízo.", "Um defeito que pode ser convalidado pelas partes.", "Um vício grave que atinge a ordem pública e não pode ser sanado, gerando a invalidação do ato ou do processo.", "Um erro de forma que não afeta o conteúdo da decisão.", "Um vício que só pode ser arguido pela parte prejudicada."],
+        "correctAnswerIndex": 2,
+        "explanation": "A nulidade absoluta é um vício insanável, que viola princípios fundamentais do processo e pode ser declarada de ofício pelo juiz a qualquer tempo, gerando a invalidação do ato processual ou de todo o processo.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Nulidades"
+    },
+    {
+        "question": "O Ministério Público é o titular da ação penal pública. O que acontece se o Ministério Público não oferece denúncia no prazo legal, sem justificativa?",
+        "options": ["O processo é arquivado automaticamente.", "Ação penal privada subsidiária da pública pode ser ajuizada.", "O juiz pode requisitar o oferecimento da denúncia.", "O inquérito policial é anulado.", "O réu é automaticamente absolvido."],
+        "correctAnswerIndex": 1,
+        "explanation": "Se o Ministério Público não oferecer a denúncia no prazo legal, a ação penal privada subsidiária da pública poderá ser ajuizada, conforme o Art. 29 do Código de Processo Penal e Art. 5º, LIX, da CF/88.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Ação Penal"
+    },
+    {
+        "question": "Qual a finalidade principal do inquérito policial?",
+        "options": ["Julgar o acusado.", "Reunir provas e informações para subsidiar a ação penal.", "Aplicar a pena.", "Garantir a ampla defesa.", "Decidir sobre a prisão preventiva."],
+        "correctAnswerIndex": 1,
+        "explanation": "O inquérito policial tem como principal finalidade a coleta de elementos de informação e provas que possam subsidiar a futura ação penal, servindo de base para a denúncia ou queixa.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Inquérito Policial"
+    },
+    {
+        "question": "O que é 'autoria' e 'participação' no Direito Processual Penal?",
+        "options": ["Ambos se referem a quem planeja o crime.", "Autoria é quem executa o crime, participação é quem contribui sem executar diretamente.", "Autoria é quem testemunha o crime, participação é quem o denuncia.", "Autoria é quem julga, participação é quem defende.", "Não há diferença entre os termos."],
+        "correctAnswerIndex": 1,
+        "explanation": "Autoria refere-se àquele que pratica o núcleo do tipo penal (executa o crime), enquanto participação é a contribuição de menor relevância, sem a execução direta do delito.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Concurso de Pessoas"
+    },
+    {
+        "question": "Qual o princípio que estabelece que ninguém será considerado culpado até o trânsito em julgado de sentença penal condenatória?",
+        "options": ["Princípio da Legalidade", "Princípio da Ampla Defesa", "Princípio do Contraditório", "Princípio da Presunção de Inocência", "Princípio da Verdade Real"],
+        "correctAnswerIndex": 3,
+        "explanation": "O princípio da presunção de inocência (ou não culpabilidade) é uma garantia fundamental que impede que uma pessoa seja tratada como culpada antes de uma decisão judicial final e irrecorrível.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Princípios do Processo Penal"
+    },
+    {
+        "question": "No processo penal, o que é 'sentença'?",
+        "options": ["Um despacho do juiz que ordena uma diligência.", "A decisão final do juiz que resolve o mérito da causa ou a extingue sem julgamento de mérito.", "O ato de intimação das partes.", "Um parecer do Ministério Público.", "O recurso contra a decisão do juiz."],
+        "correctAnswerIndex": 1,
+        "explanation": "A sentença é o ato pelo qual o juiz põe fim à fase de conhecimento do processo, resolvendo ou não o mérito da causa.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Atos Processuais"
+    },
+    {
+        "question": "Qual a principal diferença entre 'ação penal pública incondicionada' e 'condicionada à representação'?",
+        "options": ["A incondicionada depende de autorização do MP, a condicionada não.", "A incondicionada não depende da vontade da vítima, a condicionada exige a representação da vítima.", "A incondicionada é para crimes graves, a condicionada para crimes leves.", "A incondicionada é proposta pela defesa, a condicionada pela acusação.", "Não há diferença relevante."],
+        "correctAnswerIndex": 1,
+        "explanation": "Na ação penal pública incondicionada, o Ministério Público pode iniciar o processo sem a necessidade de autorização ou representação da vítima. Na ação penal pública condicionada à representação, é indispensável a manifestação de vontade da vítima para que o MP possa agir.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Ação Penal"
+    },
+    {
+        "question": "O que é 'livre convencimento motivado' no processo penal?",
+        "options": ["O juiz decide sem apresentar fundamentos.", "O juiz é obrigado a seguir as provas da acusação.", "O juiz deve fundamentar suas decisões, baseando-se nas provas dos autos.", "O juiz pode decidir com base em sua intuição.", "O juiz deve apenas copiar a decisão de tribunais superiores."],
+        "correctAnswerIndex": 2,
+        "explanation": "O princípio do livre convencimento motivado (ou persuasão racional) permite que o juiz forme sua convicção livremente, desde que fundamente suas decisões nas provas produzidas e no direito aplicável ao caso.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Sistemas de Apreciação da Prova"
+    },
+    {
+        "question": "Qual o prazo para a Defesa apresentar resposta à acusação no processo penal comum, após a citação?",
+        "options": ["3 dias", "5 dias", "10 dias", "15 dias", "30 dias"],
+        "correctAnswerIndex": 2,
+        "explanation": "Após a citação, o réu terá o prazo de 10 dias para apresentar resposta à acusação, momento em que poderá arguir preliminares e alegar tudo o que interessa à sua defesa.",
+        "subject": "Noções de Direito Processual Penal",
+        "topic": "Prazos Processuais"
+    }
+]
